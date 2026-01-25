@@ -1,4 +1,38 @@
 # Meetings
 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+Join our community meetings to discuss the PURL and VERS specification, the 
+many PURL or VERS implementaiont projects, ask questions, and collaborate with the team.
+
+## Bi-weekly Community Meeting
+
+-   **When**: Every other Wednesday at 17:00 UTC
+-   **Topic**: Discussion of the [PURL](https://github.com/package-url/purl-spec)
+and [VERS](https://github.com/package-url/vers-spec) specifications and 
+related projects
+-   **Where**: https://meet.google.com/ryq-aimn-ghd
+
+## Bi-weekly TC54/TG2 Meeting
+
+-   **When**: Every other Friday at 15:00 UTC
+-   **Topic**: TG2 is the Ecma TC54 working group responsible for the [PURL](https://github.com/package-url/purl-spec) and [VERS](https://github.com/package-url/vers-spec) specifications
+-   **Where**: https://meet.google.com/ryq-aimn-ghd
+
+See more information about **Upcoming Meetings** at the [Ecma TC54 Package-URL](https://tc54.org/purl/) site.
+
+
+## Join the Conversation
+
+There are _purl_ Slack channels hosted by AboutCode and CycloneDX:
+
+- [AboutCode](https://aboutcode-org.slack.com/)
+- [OWASP CycloneDX](https://cyclonedx.slack.com/)
+
+AboutCode Slack also has several channels that include notifications from 
+GitHub respositories to help you track project-level activity.
+   - _packageurl-python-gh_ tracks activity for https://github.com/package-url/packageurl-python
+   - _purl-libraries-gh_ tracks activity across the _packageurl_ libraries 
+   from https://github.com/package-url
+   - _purl-spec-gh_ tracks activity for https://github.com/package-url/purl-spec
+   - _vers-spec-gh_ tracks activity for https://github.com/package-url/vers-spec
+
+
