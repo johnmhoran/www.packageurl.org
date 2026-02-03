@@ -78,6 +78,9 @@ jobs:
       github.event_name != 'pull_request'
     runs-on: ubuntu-latest
 
+    environment:
+        name: github-pages
+
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@v4
