@@ -16,7 +16,7 @@ Each PURL type is specified in a JSON document that matches this schema. These J
 **PURL Type Definition JSON Schema 1.0**
 
 - <a href="https://github.com/package-url/purl-spec/blob/main/schemas/purl-type-definition.schema-1.0.json" target="_blank">JSON Schema</a> `↗`
-- <a href="/schemas/purl-type-definition.schema-1.0.html" target="_blank">Interactive HTML</a> `↗`
+- <a href="/interactive_schemas/purl-type-definition.schema-1.0.html" target="_blank">Interactive HTML</a> `↗`
 
 
 ## PURL Tests
@@ -30,4 +30,4 @@ The **PURL Test JSON Schema** provides the structure for test at two levels:
 **PURL Test JSON Schema**
 
 - <a href="https://github.com/package-url/purl-spec/blob/main/schemas/purl-test.schema-0.1.json" target="_blank">JSON Schema</a> `↗`
-- <a href="/schemas/purl-test.schema.html" target="_blank">Interactive HTML</a> `↗`
+- <a href="/interactive_schemas/purl-test.schema.html" target="_blank">Interactive HTML</a> `↗`
