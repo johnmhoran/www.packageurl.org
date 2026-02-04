@@ -6,4 +6,5 @@ This repository currently has two primary purposes:
 - Manage the www.packageurl.org website which is based on Docusaurus.
 
 The production website is at: https://www.packageurl.org
+
 The staging website is at: https://package-url.github.io/www.packageurl.org/
