@@ -1,0 +1,11 @@
+{
+"name": "The name of this specification.",
+"publisher": "The name of the person or organization that publishes/maintains the specification.",
+"description": "Description of the specification.",
+"homepage_url": "URL for the primary location of the latest version of the specification.",
+"documentation_url": "URL for additional documentation of the specification.",
+"repository_url": "URL for the repository where the specification is maintained.",
+"license": "License for the specification in SPDX license expression format.",
+"standards": "PURL v1.0, VERS or both.",
+"notes": "Additional information."
+}
