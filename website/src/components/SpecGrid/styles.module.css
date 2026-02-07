@@ -624,3 +624,70 @@ the modal when the link is clicked from inside an open modal. */
   max-height: 100%;
   object-fit: contain;
 }
+
+/* 2026-02-06 Friday 15:30:57.   */
+/* Fix width issues in above conflicting layout models. */
+.field_tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #0066ff;
+    padding: 8px 10px;
+    border-radius: 6px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    white-space: normal;
+
+    /* width: auto;
+    min-width: 220px;
+    max-width: 420px; */
+
+    /* 2026-02-06 Friday 17:32:47.  Try this. Better and simpler. */
+    width: 220px;
+
+    /* 2026-01-22 Thursday 13:27:09.try */
+    /* width: max-content; */
+
+    z-index: 10;
+    opacity: 1;
+
+    line-height: 1.25em;
+    font-size: 1rem;
+    font-size: .9rem;
+    overflow-wrap: break-word;
+}
+
+.fieldLabelWrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    gap: 0px;
+}
+
+.fieldLabel {
+    font-weight: bold;
+}
+
+.fieldColon {
+    font-weight: normal;
+}
+
+.helpIconWrapper {
+    display: inline-flex;
+    align-items: center;
+    cursor: help;
+}
+
+.helpIcon {
+    width: 14px;
+    height: 14px;
+    opacity: 0.75;
+}
+
+.helpIcon:hover {
+    opacity: 1;
+}

@@ -1,23 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import styles from './styles.module.css';
 import specs from '@site/src/data/specifications.json';
+import field_help from '@site/src/data/field_help.json';
 
 export default function SpecGrid() {
-    // No longer used?
-    // const [message, setMessage] = useState(null);
     const [selectedSpec, setSelectedSpec] = useState(null);
     const [activeTab, setActiveTab] = useState('overview');
-    // Monitor open modal -- state prevents display of main-page alert
-    // No longer used?
-    // const [isModalOpen, setIsModalOpen] = useState(false);
     const openModal = (spec) => {
         setSelectedSpec(spec); // sets modal content
     };
-    // Use a separate state for the modal alert
-    // No longer used?
-    // const [modalMessage, setModalMessage] = useState(null);
 
-    // Limit when the tooltip appears
     function DescriptionWithTooltip({ text }) {
         const descRef = React.useRef(null);
         const [showTooltip, setShowTooltip] = React.useState(false);
@@ -28,7 +20,7 @@ export default function SpecGrid() {
                 // check if content is overflowing its container
                 setShowTooltip(
                     el.scrollHeight > el.clientHeight ||
-                        el.scrollWidth > el.clientWidth,
+                    el.scrollWidth > el.clientWidth,
                 );
             }
         }, [text]);
@@ -43,6 +35,52 @@ export default function SpecGrid() {
                 </div>
                 {showTooltip && <div className={styles.tooltip}>{text}</div>}
             </div>
+        );
+    }
+
+    // 2026-02-06 Friday 15:20:38.
+    function HoverTooltipCard({ children, tooltip }) {
+        const [showTooltip, setShowTooltip] = React.useState(false);
+
+        return (
+            <span
+                // className={styles.projectDescriptionWrapper}
+                className={styles.specDescriptionWrapper}
+                onMouseEnter={() => setShowTooltip(true)}
+                onMouseLeave={() => setShowTooltip(false)}
+            >
+                {children}
+                {showTooltip && (
+                    <div className={styles.field_tooltip}>
+                        {tooltip}
+                    </div>
+                )}
+            </span>
+        );
+    }
+
+
+    function FieldLabelHelpCard({ label, help }) {
+        if (!help) {
+            return <strong>{label}:</strong>;
+        }
+
+        return (
+            <span className={styles.fieldLabelWrapper}>
+                <span className={styles.fieldLabel}>{label}</span>
+
+                <span className={styles.helpIconWrapper}>
+                    <HoverTooltipCard tooltip={help}>
+                        <img
+                            src="/img/help.svg"
+                            alt={`${label} help`}
+                            className={styles.helpIcon}
+                        />
+                    </HoverTooltipCard>
+                </span>
+
+                <span className={styles.fieldColon}>:&nbsp;</span>
+            </span>
         );
     }
 
@@ -87,11 +125,11 @@ export default function SpecGrid() {
                             <div className={styles.specCardTopBlock}>
                                 <div className={styles.topRow}>
                                     <h4 className={styles.specName}>
-                                        {spec.homepage ? (
+                                        {spec.homepage_url ? (
                                             <a
-                                                href={spec.homepage}
+                                                href={spec.homepage_url}
                                                 target={
-                                                    spec.homepage.startsWith(
+                                                    spec.homepage_url.startsWith(
                                                         'http',
                                                     )
                                                         ? '_blank'
@@ -140,21 +178,21 @@ export default function SpecGrid() {
 
                             <div className={styles.specCardMidBlock}>
                                 <ul className={styles.specMeta}>
-                                    {isUsableValue(spec.language) && (
-                                        <li>
-                                            <strong>Base language:</strong>{' '}
-                                            {spec.language}
-                                        </li>
-                                    )}
                                     {isUsableValue(spec.license) && (
                                         <li>
-                                            <strong>License:</strong>{' '}
+                                            <FieldLabelHelpCard
+                                                label="License"
+                                                help={field_help.license}
+                                            />
                                             {spec.license}
                                         </li>
                                     )}
                                     {isUsableValue(spec.standards) && (
                                         <li>
-                                            <strong>Standards:</strong>{' '}
+                                            <FieldLabelHelpCard
+                                                label="Standards"
+                                                help={field_help.standards}
+                                            />
                                             {spec.standards}
                                         </li>
                                     )}
@@ -167,12 +205,6 @@ export default function SpecGrid() {
             </div>
             {/* ^ end of specGridContainer */}
 
-            {/* Popup message */}
-            {/* Don't display this message if the modal is open. */}
-            {/* No longer used? */}
-            {/* {!isModalOpen && message && (
-                <div className={styles.modalAlertOverlay_main}>{message}</div>
-            )} */}
 
             {/* Modal */}
             {selectedSpec && (
@@ -195,163 +227,129 @@ export default function SpecGrid() {
                                 <div className={styles.twoColumnSection}>
                                     <div className={styles.column}>
                                         <ul className={styles.featureList}>
+
                                             {isUsableValue(
-                                                selectedSpec.language,
+                                                selectedSpec.publisher,
                                             ) && (
-                                                <li>
-                                                    <strong>
-                                                        Base Language:
-                                                    </strong>{' '}
-                                                    {selectedSpec.language}
-                                                </li>
-                                            )}
+                                                    <li>
+                                                        <FieldLabelHelpCard
+                                                            label="Publisher"
+                                                            help={field_help.publisher}
+                                                        />
+                                                        {selectedSpec.publisher}
+                                                    </li>
+                                                )}
 
                                             {isUsableValue(
                                                 selectedSpec.license,
                                             ) && (
-                                                <li>
-                                                    <strong>License:</strong>{' '}
-                                                    {selectedSpec.license}
-                                                </li>
-                                            )}
+                                                    <li>
+                                                        <FieldLabelHelpCard
+                                                            label="License"
+                                                            help={field_help.license}
+                                                        />
+                                                        {selectedSpec.license}
+                                                    </li>
+                                                )}
 
-                                            {isUsableValue(
-                                                selectedSpec.functions,
-                                            ) && (
-                                                <li>
-                                                    <strong>Functions:</strong>{' '}
-                                                    {selectedSpec.functions}
-                                                </li>
-                                            )}
-
-                                            {isUsableValue(
-                                                selectedSpec.type,
-                                            ) && (
-                                                <li>
-                                                    <strong>Type:</strong>{' '}
-                                                    {selectedSpec.type}
-                                                </li>
-                                            )}
 
                                             {isUsableValue(
                                                 selectedSpec.standards,
                                             ) && (
-                                                <li>
-                                                    <strong>Standards:</strong>{' '}
-                                                    {selectedSpec.standards}
-                                                </li>
-                                            )}
-
-                                            {isUsableValue(
-                                                selectedSpec.platform,
-                                            ) && (
-                                                <li>
-                                                    <strong>Platform:</strong>{' '}
-                                                    {selectedSpec.platform}
-                                                </li>
-                                            )}
+                                                    <li>
+                                                        <FieldLabelHelpCard
+                                                            label="Standards"
+                                                            help={field_help.standards}
+                                                        />
+                                                        {selectedSpec.standards}
+                                                    </li>
+                                                )}
                                         </ul>
                                     </div>
 
                                     <div className={styles.column}>
                                         <ul className={styles.featureList}>
-                                            {isUsableValue(
-                                                selectedSpec.publisher,
-                                            ) && (
-                                                <li>
-                                                    <strong>Publisher:</strong>{' '}
-                                                    {selectedSpec.publisher}
-                                                </li>
-                                            )}
 
                                             {isUsableValue(
-                                                selectedSpec.homepage,
+                                                selectedSpec.homepage_url,
                                             ) && (
-                                                <li>
-                                                    <strong>Home URL:</strong>{' '}
-                                                    <a
-                                                        href={
-                                                            selectedSpec.homepage
-                                                        }
-                                                        target='_blank'
-                                                        rel='noopener noreferrer'
-                                                        className={
-                                                            styles.modalLinkUrl
-                                                        }
-                                                    >
-                                                        {selectedSpec.homepage}
-                                                    </a>
-                                                </li>
-                                            )}
+                                                    <li>
+                                                        <FieldLabelHelpCard
+                                                            label="Home URL"
+                                                            help={field_help.homepage_url}
+                                                        />
+                                                        <a
+                                                            href={
+                                                                selectedSpec.homepage_url
+                                                            }
+                                                            target='_blank'
+                                                            rel='noopener noreferrer'
+                                                            className={
+                                                                styles.modalLinkUrl
+                                                            }
+                                                        >
+                                                            {selectedSpec.homepage_url}
+                                                        </a>
+                                                    </li>
+                                                )}
 
                                             {isUsableValue(
-                                                selectedSpec.source_download,
+                                                selectedSpec.repository_url,
                                             ) && (
-                                                <li>
-                                                    <strong>Source Download URL:</strong>{' '}
-                                                    <a
-                                                        href={
-                                                            selectedSpec.source_download
-                                                        }
-                                                        target='_blank'
-                                                        rel='noopener noreferrer'
-                                                        className={
-                                                            styles.modalLinkUrl
-                                                        }
-                                                    >
-                                                        {selectedSpec.source_download}
-                                                    </a>
-                                                </li>
-                                            )}
-
-                                            {isUsableValue(
-                                                selectedSpec.package_download,
-                                            ) && (
-                                                <li>
-                                                    <strong>Package Download URL:</strong>{' '}
-                                                    <a
-                                                        href={
-                                                            selectedSpec.package_download
-                                                        }
-                                                        target='_blank'
-                                                        rel='noopener noreferrer'
-                                                        className={
-                                                            styles.modalLinkUrl
-                                                        }
-                                                    >
-                                                        {selectedSpec.package_download}
-                                                    </a>
-                                                </li>
-                                            )}
+                                                    <li>
+                                                        <FieldLabelHelpCard
+                                                            label="Repository URL"
+                                                            help={field_help.repository_url}
+                                                        />
+                                                        <a
+                                                            href={
+                                                                selectedSpec.repository_url
+                                                            }
+                                                            target='_blank'
+                                                            rel='noopener noreferrer'
+                                                            className={
+                                                                styles.modalLinkUrl
+                                                            }
+                                                        >
+                                                            {selectedSpec.repository_url}
+                                                        </a>
+                                                    </li>
+                                                )}
 
                                             {isUsableValue(
                                                 selectedSpec.documentation_url,
                                             ) && (
-                                                <li>
-                                                    <strong>Documentation URL:</strong>{' '}
-                                                    <a
-                                                        href={
-                                                            selectedSpec.documentation_url
-                                                        }
-                                                        target='_blank'
-                                                        rel='noopener noreferrer'
-                                                        className={
-                                                            styles.modalLinkUrl
-                                                        }
-                                                    >
-                                                        {selectedSpec.documentation_url}
-                                                    </a>
-                                                </li>
-                                            )}
+                                                    <li>
+                                                        <FieldLabelHelpCard
+                                                            label="Documentation URL"
+                                                            help={field_help.documentation_url}
+                                                        />
+                                                        <a
+                                                            href={
+                                                                selectedSpec.documentation_url
+                                                            }
+                                                            target='_blank'
+                                                            rel='noopener noreferrer'
+                                                            className={
+                                                                styles.modalLinkUrl
+                                                            }
+                                                        >
+                                                            {selectedSpec.documentation_url}
+                                                        </a>
+                                                    </li>
+                                                )}
 
                                             {isUsableValue(
                                                 selectedSpec.notes,
                                             ) && (
-                                                <li>
-                                                    <strong>Notes:</strong>{' '}
-                                                    {selectedSpec.notes}
-                                                </li>
-                                            )}
+                                                    <li>
+                                                        <FieldLabelHelpCard
+                                                            label="Notes"
+                                                            help={field_help.notes}
+                                                        />
+                                                        {selectedSpec.notes}
+                                                    </li>
+                                                )}
                                         </ul>
                                     </div>
                                 </div>
