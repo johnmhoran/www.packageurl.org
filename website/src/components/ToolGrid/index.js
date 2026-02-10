@@ -1,23 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import styles from './styles.module.css';
 import tools from '@site/src/data/tools.json';
+import tool_field_help from '@site/src/data/tool_field_help.json';
 
 export default function ToolGrid() {
-    // No longer used?
-    // const [message, setMessage] = useState(null);
     const [selectedTool, setSelectedTool] = useState(null);
     const [activeTab, setActiveTab] = useState('overview');
-    // Monitor open modal -- state prevents display of main-page alert
-    // No longer used?
-    // const [isModalOpen, setIsModalOpen] = useState(false);
     const openModal = (tool) => {
         setSelectedTool(tool); // sets modal content
     };
-    // Use a separate state for the modal alert
-    // No longer used?
-    // const [modalMessage, setModalMessage] = useState(null);
 
-    // Limit when the tooltip appears
     function DescriptionWithTooltip({ text }) {
         const descRef = React.useRef(null);
         const [showTooltip, setShowTooltip] = React.useState(false);
@@ -35,14 +27,48 @@ export default function ToolGrid() {
 
         return (
             <div className={styles.toolDescriptionWrapper}>
-                <div
-                    ref={descRef}
-                    className={`${styles.toolDescription} ${styles.multiline}`}
-                >
+                <div ref={descRef} className={`${styles.toolDescription}`}>
                     {text}
                 </div>
                 {showTooltip && <div className={styles.tooltip}>{text}</div>}
             </div>
+        );
+    }
+
+    // Works with FieldLabelHelpCard.
+    function HoverTooltipCard({ children, tooltip }) {
+        const [showTooltip, setShowTooltip] = React.useState(false);
+
+        return (
+            <span
+                className={styles.toolDescriptionWrapper}
+                onMouseEnter={() => setShowTooltip(true)}
+                onMouseLeave={() => setShowTooltip(false)}
+            >
+                {children}
+                {showTooltip && (
+                    <div className={styles.field_tooltip}>{tooltip}</div>
+                )}
+            </span>
+        );
+    }
+
+    // This version uses the field name itself -- no icon -- to trigger the tootip.
+    function FieldLabelHelpCard({ label, help }) {
+        if (!help) {
+            return <strong>{label}:</strong>;
+        }
+
+        return (
+            <span className={styles.fieldLabelWrapper}>
+                <HoverTooltipCard tooltip={help}>
+                    <strong className={styles.fieldLabelWithHelp}>
+                        {label}
+                    </strong>
+                </HoverTooltipCard>
+
+                <span className={styles.fieldColon}>:&nbsp;</span>
+            </span>
         );
     }
 
@@ -84,7 +110,7 @@ export default function ToolGrid() {
                             className={styles.toolCard}
                             onClick={() => openModal(tool)}
                         >
-                            <div className={styles.toolCardTopBlock}>
+                            <div>
                                 <div className={styles.topRow}>
                                     <h4 className={styles.toolName}>
                                         {tool.homepage ? (
@@ -124,7 +150,7 @@ export default function ToolGrid() {
                                 </div>
                             </div>
 
-                            <div className={styles.toolCardMidBlock}>
+                            <div>
                                 {isUsableValue(tool.description) && (
                                     <div
                                         className={
@@ -138,42 +164,45 @@ export default function ToolGrid() {
                                 )}
                             </div>
 
-                            <div className={styles.toolCardMidBlock}>
+                            <div>
                                 <ul className={styles.toolMeta}>
                                     {isUsableValue(tool.language) && (
                                         <li>
-                                            <strong>Base language:</strong>{' '}
+                                            <FieldLabelHelpCard
+                                                label='Base language'
+                                                help={tool_field_help.language}
+                                            />
                                             {tool.language}
                                         </li>
                                     )}
                                     {isUsableValue(tool.software_license) && (
                                         <li>
-                                            <strong>Software License:</strong>{' '}
+                                            <FieldLabelHelpCard
+                                                label='Software License'
+                                                help={
+                                                    tool_field_help.software_license
+                                                }
+                                            />
                                             {tool.software_license}
                                         </li>
                                     )}
                                     {isUsableValue(tool.standards) && (
                                         <li>
-                                            <strong>Standards:</strong>{' '}
+                                            <FieldLabelHelpCard
+                                                label='Standards'
+                                                help={tool_field_help.standards}
+                                            />
                                             {tool.standards}
                                         </li>
                                     )}
                                 </ul>
                             </div>
-
                         </div>
                     ))}
                 </div>
                 {/* ^ end of toolGrid */}
             </div>
             {/* ^ end of toolGridContainer */}
-
-            {/* Popup message */}
-            {/* Don't display this message if the modal is open. */}
-            {/* No longer used? */}
-            {/* {!isModalOpen && message && (
-                <div className={styles.modalAlertOverlay_main}>{message}</div>
-            )} */}
 
             {/* Modal */}
             {selectedTool && (
@@ -200,7 +229,12 @@ export default function ToolGrid() {
                                                 selectedTool.language,
                                             ) && (
                                                 <li>
-                                                    <strong>Base Language:</strong>{' '}
+                                                    <FieldLabelHelpCard
+                                                        label='Base Language'
+                                                        help={
+                                                            tool_field_help.language
+                                                        }
+                                                    />
                                                     {selectedTool.language}
                                                 </li>
                                             )}
@@ -209,8 +243,15 @@ export default function ToolGrid() {
                                                 selectedTool.software_license,
                                             ) && (
                                                 <li>
-                                                    <strong>Software License:</strong>{' '}
-                                                    {selectedTool.software_license}
+                                                    <FieldLabelHelpCard
+                                                        label='Software License'
+                                                        help={
+                                                            tool_field_help.software_license
+                                                        }
+                                                    />
+                                                    {
+                                                        selectedTool.software_license
+                                                    }
                                                 </li>
                                             )}
 
@@ -218,7 +259,12 @@ export default function ToolGrid() {
                                                 selectedTool.data_license,
                                             ) && (
                                                 <li>
-                                                    <strong>Data License:</strong>{' '}
+                                                    <FieldLabelHelpCard
+                                                        label='Data License'
+                                                        help={
+                                                            tool_field_help.data_license
+                                                        }
+                                                    />
                                                     {selectedTool.data_license}
                                                 </li>
                                             )}
@@ -227,8 +273,15 @@ export default function ToolGrid() {
                                                 selectedTool.service_license,
                                             ) && (
                                                 <li>
-                                                    <strong>Service License:</strong>{' '}
-                                                    {selectedTool.service_license}
+                                                    <FieldLabelHelpCard
+                                                        label='Service License'
+                                                        help={
+                                                            tool_field_help.service_license
+                                                        }
+                                                    />
+                                                    {
+                                                        selectedTool.service_license
+                                                    }
                                                 </li>
                                             )}
 
@@ -236,7 +289,12 @@ export default function ToolGrid() {
                                                 selectedTool.functions,
                                             ) && (
                                                 <li>
-                                                    <strong>Functions:</strong>{' '}
+                                                    <FieldLabelHelpCard
+                                                        label='Functions'
+                                                        help={
+                                                            tool_field_help.functions
+                                                        }
+                                                    />
                                                     {selectedTool.functions}
                                                 </li>
                                             )}
@@ -245,7 +303,12 @@ export default function ToolGrid() {
                                                 selectedTool.type,
                                             ) && (
                                                 <li>
-                                                    <strong>Type:</strong>{' '}
+                                                    <FieldLabelHelpCard
+                                                        label='Type'
+                                                        help={
+                                                            tool_field_help.type
+                                                        }
+                                                    />
                                                     {selectedTool.type}
                                                 </li>
                                             )}
@@ -254,17 +317,27 @@ export default function ToolGrid() {
                                                 selectedTool.standards,
                                             ) && (
                                                 <li>
-                                                    <strong>Standards:</strong>{' '}
+                                                    <FieldLabelHelpCard
+                                                        label='Standards'
+                                                        help={
+                                                            tool_field_help.standards
+                                                        }
+                                                    />
                                                     {selectedTool.standards}
                                                 </li>
                                             )}
 
                                             {isUsableValue(
-                                                selectedTool.platform,
+                                                selectedTool.platforms,
                                             ) && (
                                                 <li>
-                                                    <strong>Platform:</strong>{' '}
-                                                    {selectedTool.platform}
+                                                    <FieldLabelHelpCard
+                                                        label='Platforms'
+                                                        help={
+                                                            tool_field_help.platforms
+                                                        }
+                                                    />
+                                                    {selectedTool.platforms}
                                                 </li>
                                             )}
                                         </ul>
@@ -276,19 +349,29 @@ export default function ToolGrid() {
                                                 selectedTool.publisher,
                                             ) && (
                                                 <li>
-                                                    <strong>Publisher:</strong>{' '}
+                                                    <FieldLabelHelpCard
+                                                        label='Publisher'
+                                                        help={
+                                                            tool_field_help.publisher
+                                                        }
+                                                    />
                                                     {selectedTool.publisher}
                                                 </li>
                                             )}
 
                                             {isUsableValue(
-                                                selectedTool.homepage,
+                                                selectedTool.homepage_url,
                                             ) && (
                                                 <li>
-                                                    <strong>Home URL:</strong>{' '}
+                                                    <FieldLabelHelpCard
+                                                        label='Homepage URL'
+                                                        help={
+                                                            tool_field_help.homepage_url
+                                                        }
+                                                    />
                                                     <a
                                                         href={
-                                                            selectedTool.homepage
+                                                            selectedTool.homepage_url
                                                         }
                                                         target='_blank'
                                                         rel='noopener noreferrer'
@@ -296,7 +379,32 @@ export default function ToolGrid() {
                                                             styles.modalLinkUrl
                                                         }
                                                     >
-                                                        {selectedTool.homepage}
+                                                        {selectedTool.homepage_url}
+                                                    </a>
+                                                </li>
+                                            )}
+
+                                            {isUsableValue(
+                                                selectedTool.repository_url,
+                                            ) && (
+                                                <li>
+                                                    <FieldLabelHelpCard
+                                                        label='Repository URL'
+                                                        help={
+                                                            tool_field_help.repository_url
+                                                        }
+                                                    />
+                                                    <a
+                                                        href={
+                                                            selectedTool.repository_url
+                                                        }
+                                                        target='_blank'
+                                                        rel='noopener noreferrer'
+                                                        className={
+                                                            styles.modalLinkUrl
+                                                        }
+                                                    >
+                                                        {selectedTool.repository_url}
                                                     </a>
                                                 </li>
                                             )}
@@ -305,7 +413,12 @@ export default function ToolGrid() {
                                                 selectedTool.source_download,
                                             ) && (
                                                 <li>
-                                                    <strong>Source Download URL:</strong>{' '}
+                                                    <FieldLabelHelpCard
+                                                        label='Source Download URL'
+                                                        help={
+                                                            tool_field_help.source_download
+                                                        }
+                                                    />
                                                     <a
                                                         href={
                                                             selectedTool.source_download
@@ -316,7 +429,9 @@ export default function ToolGrid() {
                                                             styles.modalLinkUrl
                                                         }
                                                     >
-                                                        {selectedTool.source_download}
+                                                        {
+                                                            selectedTool.source_download
+                                                        }
                                                     </a>
                                                 </li>
                                             )}
@@ -325,7 +440,12 @@ export default function ToolGrid() {
                                                 selectedTool.package_download,
                                             ) && (
                                                 <li>
-                                                    <strong>Package Download URL:</strong>{' '}
+                                                    <FieldLabelHelpCard
+                                                        label='Package Download URL'
+                                                        help={
+                                                            tool_field_help.package_download
+                                                        }
+                                                    />
                                                     <a
                                                         href={
                                                             selectedTool.package_download
@@ -336,7 +456,9 @@ export default function ToolGrid() {
                                                             styles.modalLinkUrl
                                                         }
                                                     >
-                                                        {selectedTool.package_download}
+                                                        {
+                                                            selectedTool.package_download
+                                                        }
                                                     </a>
                                                 </li>
                                             )}
@@ -345,7 +467,12 @@ export default function ToolGrid() {
                                                 selectedTool.documentation_url,
                                             ) && (
                                                 <li>
-                                                    <strong>Documentation URL:</strong>{' '}
+                                                    <FieldLabelHelpCard
+                                                        label='Documentation URL'
+                                                        help={
+                                                            tool_field_help.documentation_url
+                                                        }
+                                                    />
                                                     <a
                                                         href={
                                                             selectedTool.documentation_url
@@ -356,7 +483,36 @@ export default function ToolGrid() {
                                                             styles.modalLinkUrl
                                                         }
                                                     >
-                                                        {selectedTool.documentation_url}
+                                                        {
+                                                            selectedTool.documentation_url
+                                                        }
+                                                    </a>
+                                                </li>
+                                            )}
+
+                                            {isUsableValue(
+                                                selectedTool.service_url,
+                                            ) && (
+                                                <li>
+                                                    <FieldLabelHelpCard
+                                                        label='Service URL'
+                                                        help={
+                                                            tool_field_help.service_url
+                                                        }
+                                                    />
+                                                    <a
+                                                        href={
+                                                            selectedTool.service_url
+                                                        }
+                                                        target='_blank'
+                                                        rel='noopener noreferrer'
+                                                        className={
+                                                            styles.modalLinkUrl
+                                                        }
+                                                    >
+                                                        {
+                                                            selectedTool.service_url
+                                                        }
                                                     </a>
                                                 </li>
                                             )}
@@ -365,7 +521,12 @@ export default function ToolGrid() {
                                                 selectedTool.notes,
                                             ) && (
                                                 <li>
-                                                    <strong>Notes:</strong>{' '}
+                                                    <FieldLabelHelpCard
+                                                        label='Notes'
+                                                        help={
+                                                            tool_field_help.notes
+                                                        }
+                                                    />
                                                     {selectedTool.notes}
                                                 </li>
                                             )}
@@ -384,13 +545,6 @@ export default function ToolGrid() {
                                 Close
                             </button>
                         </div>
-                        {/* Display alert inside open modal. */}
-                        {/* No longer used? */}
-                        {/* {modalMessage && (
-                            <div className={styles.modalAlertOverlay}>
-                                {modalMessage}
-                            </div>
-                        )} */}
                     </div>
                 </div>
             )}

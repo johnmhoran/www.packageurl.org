@@ -1,0 +1,20 @@
+{
+"name": "The name of the tool - includes the publisher if the name is not unique.",
+"publisher": "The name of the person or organization that publishes/maintains the tool.",
+"description": "Short description of what the tool does.",
+"homepage_url": "Home page for the tool. This will often be the same as the Repository URL.",
+"repository_url": "Repository where the code for this tool is maintained.",
+"source_download": "URL for downloading the project source releases.",
+"package_download": "URL for downloading one or more packages published by this project to a package manager repository like npm or PyPI.",
+"documentation_url": "Primary URL for the primary project documentation if different from the Homepage URL.",
+"service_url": "URL for API access to a data service or UI access to a demonstration system.",
+"language": "The primary language(s) used for software development in this project.",
+"software_license": "The license that applies to the software from this project - in SPDX License Expression format.",
+"data_license": "The license that applies to data provided by this project - in SPDX License Expression format.",
+"service_license": "License that applies to API access to a data service or UI access to a demonstration system.",
+"type": "The general type of tool - 'Application', 'CLI Utility', 'Library' or 'Service'",
+"functions": "For future use.",
+"platforms": "The platform(s) for the tool - 'Container', 'Linux', 'MacOS', 'Windows' or other.",
+"standards": "PURL v1.0, VERS or both.",
+"notes": "Additional information about your tool - as needed."
+}
