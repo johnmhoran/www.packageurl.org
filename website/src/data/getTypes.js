@@ -183,7 +183,7 @@ export default function getPackages(baseUrl) {
         {
             name: "vscode-extension",
             url: "https://github.com/package-url/purl-spec/blob/main/types-doc/vscode-extension-definition.md",
-            logo: "n/a",
+            logo: `${baseUrl}img/vscode.svg`,
         },
         {
             name: "yocto",
