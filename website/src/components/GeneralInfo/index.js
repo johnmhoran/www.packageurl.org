@@ -7,8 +7,8 @@ export default function GeneralInfoSection() {
             <div className={styles.twoColumn}>
                 {/* Column 1 */}
                 <div className={styles.column}>
-                    <h2>Community call</h2>
-                    <div className={styles.card}>
+                    <h2>Community meetings</h2>
+                    {/* <div className={styles.card}>
                         <p>
                             Join our next PURL community call on 2026-02-18.
                         </p>
@@ -23,6 +23,25 @@ export default function GeneralInfoSection() {
                                 OWASP Software Supply Chain Community Calendar
                             </a>
                             .
+                        </p>
+                    </div> */}
+                    <div className={styles.card}>
+                        <p>
+                            The PURL community has two recurring meetings where
+                            we discuss PURL and VERS:
+                        </p>
+
+                        <ul>
+                            <li>Community meetings biweekly on Wednesdays.</li>
+                            <li>TC54/TG2 meetings biweekly on Fridays.</li>
+                        </ul>
+
+                        <p>
+                            See Upcoming Meetings at{' '}
+                            <a href='https://tc54.org/purl/'>
+                                Package-URL | TC54
+                            </a>{' '}
+                            for details about the dates and times.
                         </p>
                     </div>
                 </div>
@@ -53,8 +72,8 @@ export default function GeneralInfoSection() {
                                 target='_blank'
                             >
                                 first release (v1.0.0)
-                            </a>
-                            {' '}of the purl-spec project followed on 2025-12-18.
+                            </a>{' '}
+                            of the purl-spec project followed on 2025-12-18.
                         </p>
                     </div>
                 </div>
