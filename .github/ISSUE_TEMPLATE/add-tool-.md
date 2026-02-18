@@ -7,13 +7,11 @@ assignees: ''
 
 ---
 
-This is an issue template for the data we need to add a Software Tool that supports the PURL or VERS specification (or both) to the Package-URL website Homepage. 
+This is an issue template for the data we need to add a Software Tool that supports the PURL or VERS specification (or both) to the Package-URL website Homepage at [PURL-Adoption-Tools](https://www.packageurl.org/#:~:text=PURL%20v1.0-,Software%20Tools).
 
-Each Software Tool card has a card displayed in the grid on the Homepage and a modal window displaying all fields with data. Empty fields will not be displayed.
+Each Software Tool has a card displayed in the grid on the Homepage and a modal window displaying all fields with data. Empty fields will not be displayed.
 
-Please provide the data that are relevant for this software tool by replacing the description in *italics* with your data. 
-
-The data you provide will be added to the file: https://github.com/package-url/www.packageurl.org/blob/main/website/src/data/tools.json. 
+Please provide the data that are relevant for this software tool. 
 
 ## Fields displayed on the Homepage card
 Name:
@@ -40,7 +38,7 @@ Publisher:
 *The name of the organization or person who publishes the tool.*
 
 Source Download URL: 
-*URL for downloading source releases or if different from the Homepage URL.*
+*URL for downloading source releases if different from the Homepage URL.*
 
 Package Download URL: 
 *URL for downloading a software package for your tool at Maven, npm, PyPI or other package repository.*
@@ -55,7 +53,7 @@ Service License:
 *SPDX License Identifier or License Expression if your tool provides a public API or other service under a different license than the software.*
 
 Type: 
-*Current values are: 'Application', 'CLI Utility', 'Library' or 'Service'*
+*Current values are: 'Application', 'CLI Utility', 'Library' or 'Service'*.
 
 Platform: 
 *Current values are:'Container', 'Linux', 'MacOS', 'Windows' or other. Separate multiple platforms with a comma.*
@@ -64,4 +62,7 @@ Notes:
 *Additional information about your tool - as needed.*
 
 Icon: 
-*URL to an icon that you want displayed on the card.*
+*URL to an icon that you want displayed on the card. This will not be displayed as a field in the modal window.*
+
+## FYI
+The data you provide will be added to the file: https://github.com/package-url/www.packageurl.org/blob/main/website/src/data/tools.json. 
