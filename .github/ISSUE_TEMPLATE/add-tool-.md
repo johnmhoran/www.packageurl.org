@@ -1,19 +1,16 @@
 ---
-name: 'Add Tool '
+name: 'Add a Tool '
 about: Add a tool that supports PURL or VERS
-title: 'Add Tool:'
+title: 'Add a Tool:'
 labels: 'tools'
 assignees: ''
 
 ---
 
-This is an issue template for the data we need to add a Software Tool that supports the PURL or VERS specification (or both) to the Package-URL website Homepage at [PURL-Adoption-Tools](https://www.packageurl.org/#:~:text=PURL%20v1.0-,Software%20Tools).
-
-Each Software Tool has a card displayed in the grid on the Homepage and a modal window displaying all fields with data. Empty fields will not be displayed.
-
-Please provide the data that are relevant for this software tool. 
+This is an issue template for the data we need to add a Software Tool that supports the PURL or VERS specification (or both) to the Package-URL website Homepage at [PURL-Adoption-Tools](https://www.packageurl.org/#:~:text=PURL%20v1.0-,Software%20Tools). Each Software Tool has a card displayed in the grid on the Homepage and a modal window displaying all fields with data (empty fields will not be displayed). Please provide the data that are relevant for the tool that you want to add.
 
 ## Fields displayed on the Homepage card
+
 Name:
 *The short name for your tool. If the name is 'purl' or 'vers' please append your repo name for uniqueness.*
 
