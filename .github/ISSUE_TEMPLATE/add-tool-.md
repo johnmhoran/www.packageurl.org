@@ -2,7 +2,7 @@
 name: 'Add a Tool '
 about: Add a tool that supports PURL or VERS
 title: 'Add a Tool:'
-labels: ''
+labels: 'tool'
 assignees: ''
 
 ---
