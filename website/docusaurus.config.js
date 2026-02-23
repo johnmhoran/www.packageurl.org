@@ -84,12 +84,12 @@ const config = {
                             'purl/tests.md': `https://github.com/package-url/purl-spec/blob/main/docs/tests.md`,
 
                             // "VERS" section
-                            'vers-spec/vers-spec-overview.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
-                            'vers-spec/vers-spec-documentation.md': `https://github.com/package-url/vers-spec/blob/main/VERSION-RANGE-SPEC.md`,
+                            'vers-spec/vers-spec-introduction.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
+                            'vers-spec/vers-spec-specification.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers-spec/vers-spec-schemas.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers-spec/vers-spec-adopters.md': `https://github.com/package-url/vers-spec/blob/main/ADOPTERS.md`,
 
-                            // Rename About back to Particpate
+                            // "Particpate"
                             'participate/participate-contribute.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'participate/participate-meetings.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'participate/participate-events.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
