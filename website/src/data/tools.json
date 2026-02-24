@@ -483,6 +483,27 @@
         "logo": "n/a"
     },
     {
+        "name": "PackageURLs.jl",
+        "publisher": "Sébastien Celles",
+        "description": "A pure-Julia implementation of the Package URL (PURL) specification",
+        "homepage_url": "https://github.com/s-celles/PackageURLs.jl",
+        "repository_url": "n/a",
+        "source_download": "n/a",
+        "package_download": "https://juliahub.com/ui/Packages/General/PackageURLs",
+        "documentation_url": "https://s-celles.github.io/PackageURLs.jl/dev/",
+        "service_url": "n/a",
+        "language": "Julia",
+        "software_license": "MIT",
+        "data_license": "n/a",
+        "service_license": "n/a",
+        "type": "Library",
+        "functions": "n/a",
+        "platforms": "Linux, macOS, Windows",
+        "standards": "PURL v1.0",
+        "notes": "n/a",
+        "logo": "n/a"
+    },
+    {
         "name": "perl-URI-PackageURL",
         "publisher": "n/a",
         "description": "A Perl implementation of PURL and VERS",
