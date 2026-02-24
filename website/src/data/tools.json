@@ -294,6 +294,27 @@
         "logo": "img/osv-logo.png"
     },
     {
+        "name": "package-url-viewer",
+        "publisher": "Sébastien Celles",
+        "description": "A PURL (Package-URL) viewer website showing registry link and content from PurlDB and VulnerableCode",
+        "homepage_url": "https://github.com/s-celles/package-url-viewer/",
+        "repository_url": "n/a",
+        "source_download": "n/a",
+        "package_download": "n/a",
+        "documentation_url": "https://s-celles.github.io/package-url-viewer/",
+        "service_url": "n/a",
+        "language": "TypeScript, HTML, CSS",
+        "software_license": "MIT",
+        "data_license": "n/a",
+        "service_license": "n/a",
+        "type": "Application",
+        "functions": "n/a",
+        "platforms": "Linux, macOS, Windows",
+        "standards": "PURL v1.0",
+        "notes": "n/a",
+        "logo": "n/a"
+    },
+    {
         "name": "packageurl.rs",
         "publisher": "n/a",
         "description": "This crate is an implementation of the Package URL specification for the Rust programming language.",
