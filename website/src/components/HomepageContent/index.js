@@ -25,12 +25,12 @@ export default function HomepageContent() {
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px' }}
                 >
-                    <h1 id='software-specifications-and-tools'>
-                        Software Specifications and Tools
+                    <h1 id='specifications-and-tools'>
+                        Specifications and Tools
                     </h1>
                 </div>
                 <div className={styles.sectionHeader}>
-                    <h2>PURL Adoption - Specifications</h2>
+                    <h2 id="specifications">Specifications</h2>
                 </div>
                 <div
                     className={styles.sectionIntro}
@@ -43,13 +43,14 @@ export default function HomepageContent() {
 
             <section className={styles.sectionContainer}>
                 <div className={styles.sectionHeader}>
-                    <h2>Software Tools</h2>
+                    <h2 id="tools">Tools</h2>
                 </div>
                 <div
                     className={styles.sectionIntro}
                 >
-                    These are community-maintained tools that support or use the
-                    Package-URL (PURL) or VERS standards.
+                    {/* These are community-maintained tools that support or use the
+                    Package-URL (PURL) or VERS standards. */}
+                    These are tools that support or use PURL or VERS.
                 </div>
                 <ToolGrid />
             </section>

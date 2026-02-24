@@ -28,6 +28,11 @@
     color: #992600;
 }
 
+.sectionHeader h1,
+.sectionHeader h2 {
+    scroll-margin-top: 5rem; /* adjust to navbar height */
+}
+
 .sectionContainer {
   max-width: 1200px;
   margin: 0 auto;
