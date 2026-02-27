@@ -20,14 +20,36 @@ const sidebars = {
         },
         'purl/purl-spec-purl-types',
         'purl/purl-spec-schemas',
-        'purl/purl-spec-adopters',
+        // 'purl/purl-spec-adopters',
     ],
-    vers_spec: [
-        'vers-spec/vers-spec-introduction',
-        'vers-spec/vers-spec-specification',
-        'vers-spec/vers-spec-schemas',
-        'vers-spec/vers-spec-adopters',
+    vers: [
+        'vers/vers-spec-introduction',
+        'vers/vers-spec-specification',
+        'vers/vers-spec-schemas',
+        // 'vers/vers-spec-adopters',
     ],
+    // adopters: [
+    //     'adopters/adopters-intro',
+    //     'adopters/specgrid',
+    //     'adopters/toolgrid',
+    // ],
+
+    getting_started: [
+        {
+            type: 'category',
+            label: 'Getting Started',
+            link: {
+                type: 'doc',
+                id: 'getting-started/getting-started-intro', // The doc to display
+            },
+            collapsed: false,
+            items: [
+                'getting-started/toolgrid',
+                'getting-started/specgrid',
+            ],
+        },
+    ],
+
     participate: [
         'participate/participate-contribute',
         'participate/participate-meetings',

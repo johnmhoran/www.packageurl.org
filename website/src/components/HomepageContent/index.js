@@ -2,8 +2,8 @@ import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import HomeInfo from './HomeInfo.mdx';
 import GeneralInfo from '@site/src/components/GeneralInfo';
-import SpecGrid from '@site/src/components/SpecGrid';
-import ToolGrid from '@site/src/components/ToolGrid';
+// import SpecGrid from '@site/src/components/SpecGrid';
+// import ToolGrid from '@site/src/components/ToolGrid';
 import styles from './styles.module.css';
 
 export default function HomepageContent() {
@@ -19,8 +19,7 @@ export default function HomepageContent() {
                 </div>
             </section>
 
-            {/* ToolGrid Section */}
-            <section className={styles.sectionContainer}>
+            {/* <section className={styles.sectionContainer}>
                 <div
                     className={styles.sectionHeader}
                     style={{ marginBottom: '15px' }}
@@ -48,12 +47,10 @@ export default function HomepageContent() {
                 <div
                     className={styles.sectionIntro}
                 >
-                    {/* These are community-maintained tools that support or use the
-                    Package-URL (PURL) or VERS standards. */}
                     These are tools that support or use PURL or VERS.
                 </div>
                 <ToolGrid />
-            </section>
+            </section> */}
 
             <section className={styles.sectionContainer}>
                 <div className={styles.sectionHeader}>

@@ -12,7 +12,7 @@
 }
 
 .specGridContainer {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     width: 100%;
     /* Center the specgrid on the page. */
     margin: 0 auto;
