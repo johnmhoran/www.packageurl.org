@@ -89,6 +89,11 @@ const config = {
                             'vers-spec/vers-spec-schemas.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers-spec/vers-spec-adopters.md': `https://github.com/package-url/vers-spec/blob/main/ADOPTERS.md`,
 
+                            // "Adopters"
+                            'adopters/adopters-intro.mdx': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
+                            'adopters/specgrid.mdx': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
+                            'adopters/toolgrid.mdx': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
+
                             // "Particpate"
                             'participate/participate-contribute.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'participate/participate-meetings.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
@@ -137,9 +142,44 @@ const config = {
 
                     {
                         type: 'docSidebar',
-                        sidebarId: 'vers_spec',
+                        sidebarId: 'vers',
                         position: 'left',
                         label: 'VERS',
+                    },
+                    // This uses baseUrl in conjunction with a new website/src/css/custom.css style: .navbar__link.active
+                    // {
+                    //     label: 'Adopters',
+                    //     to: '/docs/adopters/adopters-intro',
+                    //     position: 'left',
+                    //     activeBaseRegex: `^${siteConfig[deployTarget].baseUrl}docs/adopters/`,
+                    //     items: [
+                    //         {
+                    //             to: '/docs/adopters/adopters-intro',
+                    //             label: 'Adopters: Specifications and Tools',
+                    //         },
+                    //         {
+                    //             to: '/docs/adopters/specgrid',
+                    //             label: 'Specifications',
+                    //         },
+                    //         { to: '/docs/adopters/toolgrid', label: 'Tools' },
+                    //     ],
+                    // },
+                    {
+                        label: 'Getting Started',
+                        to: '/docs/getting-started/getting-started-intro',
+                        position: 'left',
+                        activeBaseRegex: `^${siteConfig[deployTarget].baseUrl}docs/getting-started/`,
+                        items: [
+                            {
+                                to: '/docs/getting-started/getting-started-intro',
+                                label: 'Getting Started',
+                            },
+                            { to: '/docs/getting-started/toolgrid', label: 'Tools' },
+                            {
+                                to: '/docs/getting-started/specgrid',
+                                label: 'Specifications',
+                            },
+                        ],
                     },
                     {
                         type: 'docSidebar',
