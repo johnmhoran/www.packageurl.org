@@ -132,38 +132,50 @@ const config = {
                 style: 'dark',
                 items: [
                     { to: '/', label: 'Home', position: 'left', exact: true },
-
                     {
-                        type: 'docSidebar',
-                        sidebarId: 'purl',
-                        position: 'left',
                         label: 'PURL',
-                    },
-
-                    {
-                        type: 'docSidebar',
-                        sidebarId: 'vers',
+                        to: '/docs/purl/purl-spec-introduction',
                         position: 'left',
-                        label: 'VERS',
+                        activeBaseRegex: `^${siteConfig[deployTarget].baseUrl}docs/purl/`,
+                        items: [
+                            {
+                                to: '/docs/purl/purl-spec-introduction',
+                                label: 'Introduction',
+                            },
+                            {
+                                to: '/docs/purl/purl-spec-folder-page',
+                                label: 'Specification',
+                            },
+                            {
+                                to: '/docs/purl/purl-spec-purl-types',
+                                label: 'PURL Types',
+                            },
+                            {
+                                to: '/docs/purl/purl-spec-schemas',
+                                label: 'Schemas',
+                            },
+                        ],
                     },
-                    // This uses baseUrl in conjunction with a new website/src/css/custom.css style: .navbar__link.active
-                    // {
-                    //     label: 'Adopters',
-                    //     to: '/docs/adopters/adopters-intro',
-                    //     position: 'left',
-                    //     activeBaseRegex: `^${siteConfig[deployTarget].baseUrl}docs/adopters/`,
-                    //     items: [
-                    //         {
-                    //             to: '/docs/adopters/adopters-intro',
-                    //             label: 'Adopters: Specifications and Tools',
-                    //         },
-                    //         {
-                    //             to: '/docs/adopters/specgrid',
-                    //             label: 'Specifications',
-                    //         },
-                    //         { to: '/docs/adopters/toolgrid', label: 'Tools' },
-                    //     ],
-                    // },
+                    {
+                        label: 'VERS',
+                        to: '/docs/vers/vers-spec-introduction',
+                        position: 'left',
+                        activeBaseRegex: `^${siteConfig[deployTarget].baseUrl}docs/vers/`,
+                        items: [
+                            {
+                                to: '/docs/vers/vers-spec-introduction',
+                                label: 'Introduction',
+                            },
+                            {
+                                to: '/docs/vers/vers-spec-specification',
+                                label: 'Specification',
+                            },
+                            {
+                                to: '/docs/vers/vers-spec-schemas',
+                                label: 'Schemas',
+                            },
+                        ],
+                    },
                     {
                         label: 'Getting Started',
                         to: '/docs/getting-started/getting-started-intro',
@@ -174,7 +186,10 @@ const config = {
                                 to: '/docs/getting-started/getting-started-intro',
                                 label: 'Getting Started',
                             },
-                            { to: '/docs/getting-started/toolgrid', label: 'Tools' },
+                            {
+                                to: '/docs/getting-started/toolgrid',
+                                label: 'Tools',
+                            },
                             {
                                 to: '/docs/getting-started/specgrid',
                                 label: 'Specifications',
@@ -182,11 +197,26 @@ const config = {
                         ],
                     },
                     {
-                        type: 'docSidebar',
-                        sidebarId: 'participate',
-                        position: 'left',
                         label: 'Participate',
+                        to: '/docs/participate/participate-contribute',
+                        position: 'left',
+                        activeBaseRegex: `^${siteConfig[deployTarget].baseUrl}docs/participate/`,
+                        items: [
+                            {
+                                to: '/docs/participate/participate-contribute',
+                                label: 'Contribute',
+                            },
+                            {
+                                to: '/docs/participate/participate-meetings',
+                                label: 'Meetings',
+                            },
+                            {
+                                to: '/docs/participate/participate-events',
+                                label: 'Events',
+                            },
+                        ],
                     },
+
                     {
                         href: 'https://github.com/package-url/www.packageurl.org',
                         label: 'GitHub',
