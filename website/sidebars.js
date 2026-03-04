@@ -23,9 +23,29 @@ const sidebars = {
         // 'purl/purl-spec-adopters',
     ],
     vers: [
-        'vers/vers-spec-introduction',
-        'vers/vers-spec-specification',
+        'vers/introduction',
+        {
+            type: 'category',
+            label: 'Specification',
+            link: {
+                type: 'doc',
+                id: 'vers/vers-specification', // The doc to display
+            },
+            collapsed: false,
+            items: [
+                'vers/specification',
+                'vers/how-to-parse',
+                'vers/version-schemes',
+            ],
+        },
         'vers/vers-spec-schemas',
+        'vers/faq',
+        // 'purl/purl-spec-adopters',
+    ],
+    vers_old: [
+        'vers-old/vers-spec-introduction',
+        'vers-old/vers-spec-specification',
+        'vers-old/vers-spec-schemas',
         // 'vers/vers-spec-adopters',
     ],
     // adopters: [

@@ -89,6 +89,15 @@ const config = {
                             'vers-spec/vers-spec-schemas.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers-spec/vers-spec-adopters.md': `https://github.com/package-url/vers-spec/blob/main/ADOPTERS.md`,
 
+                            // "VERS-new" section
+                            'vers-new/vers-spec-introduction.md': `https://github.com/package-url/vers-spec/blob/main/docs/standard/introduction.md`,
+                            'vers-new/vers-spec-folder-page.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
+
+
+                            'vers-spec/vers-spec-specification.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
+                            'vers-spec/vers-spec-schemas.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
+                            'vers-spec/vers-spec-adopters.md': `https://github.com/package-url/vers-spec/blob/main/ADOPTERS.md`,
+
                             // "Adopters"
                             'adopters/adopters-intro.mdx': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'adopters/specgrid.mdx': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
@@ -158,20 +167,44 @@ const config = {
                     },
                     {
                         label: 'VERS',
-                        to: '/docs/vers/vers-spec-introduction',
+                        to: '/docs/vers/introduction',
                         position: 'left',
                         activeBaseRegex: `^${siteConfig[deployTarget].baseUrl}docs/vers/`,
                         items: [
                             {
-                                to: '/docs/vers/vers-spec-introduction',
+                                to: '/docs/vers/introduction',
                                 label: 'Introduction',
                             },
                             {
-                                to: '/docs/vers/vers-spec-specification',
+                                to: '/docs/vers/vers-specification',
                                 label: 'Specification',
                             },
                             {
                                 to: '/docs/vers/vers-spec-schemas',
+                                label: 'Schemas',
+                            },
+                            {
+                                to: '/docs/vers/faq',
+                                label: 'FAQ',
+                            },
+                        ],
+                    },
+                    {
+                        label: 'VERS-old',
+                        to: '/docs/vers-old/vers-spec-introduction',
+                        position: 'left',
+                        activeBaseRegex: `^${siteConfig[deployTarget].baseUrl}docs/vers-old/`,
+                        items: [
+                            {
+                                to: '/docs/vers-old/vers-spec-introduction',
+                                label: 'Introduction',
+                            },
+                            {
+                                to: '/docs/vers-old/vers-spec-specification',
+                                label: 'Specification',
+                            },
+                            {
+                                to: '/docs/vers-old/vers-spec-schemas',
                                 label: 'Schemas',
                             },
                         ],
