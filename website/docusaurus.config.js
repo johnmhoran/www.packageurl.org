@@ -75,7 +75,7 @@ const config = {
                             'purl/common-qualifiers.md': `https://github.com/package-url/purl-spec/blob/main/docs/common-qualifiers.md`,
                             'purl/how-to-build.md': `https://github.com/package-url/purl-spec/blob/main/docs/how-to-build.md`,
                             'purl/how-to-parse.md': `https://github.com/package-url/purl-spec/blob/main/docs/how-to-parse.md`,
-                            'purl/purl-spec-adopters.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
+                            // 'purl/purl-spec-adopters.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'purl/purl-spec-folder-page.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'purl/purl-spec-introduction.md': `https://github.com/package-url/purl-spec/blob/main/docs/standard/introduction.md`,
                             'purl/purl-spec-purl-types.mdx': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
