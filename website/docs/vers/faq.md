@@ -90,8 +90,7 @@ equivalent to the PURL **type** on the one hand and the VERS
 **version-scheme** on the other hand.
 
 See:
-- https://github.com/CVEProject/cve-schema/blob/master/schema/v5.0/CVE_JSON_5.0_schema.json#L303
-- https://github.com/CVEProject/cve-schema/blob/master/schema/v5.0/CVE_JSON_5.0_schema.json#L123
+- https://github.com/CVEProject/cve-schema/blob/main/schema/docs/versions.md#versions-and-version-ranges
 
 The semantics and expressiveness of each range are similar and VERS
 provides a compact notation rather than a more verbose JSON notation.

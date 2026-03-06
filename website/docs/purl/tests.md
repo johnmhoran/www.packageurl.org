@@ -46,9 +46,9 @@ permissive than base tests. They may correct some errors.
 
 There are three PURL test types:
 - **build**: A test to build a canonical PURL output string from an input of
-decoded PURL components. See also [/docs/how-build.md](https://github.com/package-url/purl-spec/blob/main/docs/how-to-build.md).
+decoded PURL components. See also [/docs/how-to-build.md](https://github.com/package-url/purl-spec/blob/main/docs/how-to-build.md).
 - **parse**: A test to parse a PURL input string into a set of decoded
-components. See also [/docs/how-parse.md](https://github.com/package-url/purl-spec/blob/main/docs/how-to-parse.md).
+components. See also [/docs/how-to-parse.md](https://github.com/package-url/purl-spec/blob/main/docs/how-to-parse.md).
 - **roundtrip**: A test to parse an input PURL string and then rebuild it as a
  canonical PURL output string.
 

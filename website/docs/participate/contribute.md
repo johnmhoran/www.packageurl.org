@@ -65,5 +65,5 @@ Before submitting your code or documentation, please make sure that:
 Your pull request will be reviewed by at least one maintainer before being accepted. Anyone is welcome to comment on a pull request.
 
 ### How Can I Communicate with the Package-URL Community?
-See the [Meetings page](https://package-url.github.io/www.packageurl.org/docs/participate/participate-meetings) for information about our community meetings and Slack channels. Remember that the corresponding GitHub repository is
+See the [Meetings page](/docs/participate/meetings) for information about our community meetings and Slack channels. Remember that the corresponding GitHub repository is
 always the primary forum to discuss a project.

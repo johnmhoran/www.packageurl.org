@@ -24,9 +24,9 @@ Each PURL type is specified in a JSON document that matches this schema. These J
 
 The **PURL Test JSON Schema** provides the structure for test at two levels:
 
-- Specification: These are tests for the specification across purl types The current set of specification test files are available on GitHub at: [https://github.com/package-url/purl-spec/tree/main/tests/spec/](https://github.com/package-url/purl-spec/tree/main/tests/spec/)
+- Specification: These are tests for the specification across purl types The current set of specification test files is available on GitHub at: [https://github.com/package-url/purl-spec/tree/main/tests/spec/](https://github.com/package-url/purl-spec/tree/main/tests/spec/)
 
-- Types: These tests are organized as one test file per PURL type. A PURL type test is required for adding or changing a purl type. The current set of PURL type test files are available on GitHub at: [https://github.com/package-url/purl-spec/tree/main/tests/types/](https://github.com/package-url/purl-spec/tree/main/tests/types/)
+- Types: These tests are organized as one test file per PURL type. A PURL type test is required for adding or changing a purl type. The current set of PURL type test files is available on GitHub at: [https://github.com/package-url/purl-spec/tree/main/tests/types/](https://github.com/package-url/purl-spec/tree/main/tests/types/)
 
 **PURL Test JSON Schema**
 
