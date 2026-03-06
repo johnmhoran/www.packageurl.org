@@ -84,12 +84,12 @@ const config = {
 
                             // "VERS" section
                             'vers/faq.md': `https://github.com/package-url/vers-spec/blob/main/docs/faq.md`,
-                            'vers/how-to-parse.md': `https://github.com/package-url/vers-spec/blob/main/docs/faq.md`,
+                            'vers/how-to-parse.md': `https://github.com/package-url/vers-spec/blob/main/docs/how-to-parse.md`,
                             'vers/introduction.md': `https://github.com/package-url/vers-spec/blob/main/docs/standard/introduction.md`,
                             'vers/schemas.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers/specification-folder.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers/specification.md': `https://github.com/package-url/vers-spec/blob/main/docs/standard/specification.md`,
-                            'vers/tests.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
+                            'vers/tests.md': `https://github.com/package-url/vers-spec/blob/main/docs/tests.md`,
                             'vers/version-schemes.md': `https://github.com/package-url/vers-spec/blob/main/docs/version-schemes.md`,
 
                             // "Particpate"
@@ -170,8 +170,12 @@ const config = {
                                 label: 'Introduction',
                             },
                             {
-                                to: '/docs/vers/specification',
+                                to: '/docs/vers/specification-folder',
                                 label: 'Specification',
+                            },
+                            {
+                                to: '/docs/vers/version-schemes',
+                                label: 'Version schemes',
                             },
                             {
                                 to: '/docs/vers/schemas',

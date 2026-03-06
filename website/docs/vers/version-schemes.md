@@ -11,7 +11,7 @@ There is a very wide range of software version schemes. For the development of
 the VERS specification, we are focused on three types of version schemes:
 
 - Package ecosystem version schemes: Our initial focus is to define VERS
-**version-schemes** for packages with a registered [PURL (Package-URL) **type**](https://package-url.github.io/www.packageurl.org/docs/purl/purl-spec-purl-types#registered-purl-types).
+**version-schemes** for packages with a registered [PURL (Package-URL) **type**](/docs/purl/purl-types#registered-purl-types).
 - Vulnerability system version range schemes: The focus here is on the
 definition of version ranges for major vulnerability databases, such as the
 [NVD](https://nvd.nist.gov/) and the [OSV](https://osv.dev/), to identify
@@ -27,7 +27,7 @@ structure version strings, but it does not provide a way to express version
 ranges.
 
 The following table lists versioning schemes for some common registered [PURL
-(Package-URL) **types**](https://package-url.github.io/www.packageurl.org/docs/purl/purl-spec-purl-types#registered-purl-types). If there is a registered PURL
+(Package-URL) **types**](/docs/purl/purl-types#registered-purl-types). If there is a registered PURL
 **type** for a package ecosystem, the PURL type will also be the name for the
 VERS **version-scheme**.
 
@@ -61,7 +61,7 @@ VERS **version-scheme**.
   of the comparison (less-than) operation on versions, which is required
   to understand the range itself".
     A **versionType** resembles closely the Package-URL package **type**.
-  See: https://github.com/CVEProject/cve-schema/blob/master/schema/v5.0/CVE_JSON_5.0.schema#L303
+  See: https://github.com/CVEProject/cve-schema/blob/main/schema/docs/versions.md#versions-and-version-ranges
 
 - The NVD defines CPE ranges as lists of version start and end versions
   either including or excluding the start or end version. NVD also provides
