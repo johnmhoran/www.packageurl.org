@@ -7,12 +7,26 @@ hide_table_of_contents: true
 
 # Meetings
 
-Join our community meetings to discuss the PURL and VERS specification, the
-many PURL or VERS implementaiont projects, ask questions, and collaborate with the team.
+Join our community meetings to discuss the PURL and VERS specifications, the
+many PURL or VERS implementation projects, ask questions, and collaborate with 
+the team.
+
+The Package-URL Project currently has 2 recurring biweekly meetings:
+
+- Community Meeting - The goal of this meeting is to provide an open forum for
+contributors and other community members to discuss issues and pull requests.
+The meeting is open to all interested parties. It is subject to the 
+[Package-URL Project Code of Conduct](https://github.com/package-url/purl-spec/blob/main/code-of-conduct.md).
+- Ecma TC54/TG2 Meeting - The primary goal of this meeting is to plan and 
+report progress on activities related to establishing the Ecma standards for 
+PURL and VERS. The TG2 task group was created under the [Ecma TC54 Technical Committee](https://ecma-international.org/technical-committees/tc54/). 
+This TG is open to all Ecma member organizations.  For non-members, please 
+reach out to [Philippe Ombredanne](mailto:pombredanne@aboutcode.org) to 
+inquire about temporarily joining as an observer or being invited as an expert.
 
 ## Bi-weekly Community Meeting
 
--   **When**: Every other Wednesday at 17:00 UTC
+-   **When**: Every other Wednesday at 16:00 UTC
 -   **Topic**: Discussion of the [PURL](https://github.com/package-url/purl-spec)
 and [VERS](https://github.com/package-url/vers-spec) specifications and
 related projects
@@ -20,11 +34,12 @@ related projects
 
 ## Bi-weekly TC54/TG2 Meeting
 
--   **When**: Every other Friday at 15:00 UTC
--   **Topic**: TG2 is the Ecma TC54 working group responsible for the [PURL](https://github.com/package-url/purl-spec) and [VERS](https://github.com/package-url/vers-spec) specifications
+-   **When**: Every other Friday at 14:00 UTC
+-   **Topic**: TG2 is the Ecma TC54 working group responsible for the 
+[PURL](https://github.com/package-url/purl-spec) and [VERS](https://github.com/package-url/vers-spec) specifications
 -   **Where**: https://meet.google.com/ryq-aimn-ghd
 
-See more information about **Upcoming Meetings** at the [Ecma TC54 Package-URL](https://tc54.org/purl/) site.
+See the dates for the next meetings at the [Ecma TC54 Package-URL](https://tc54.org/purl/) site.
 
 
 ## Join the Conversation
