@@ -480,7 +480,7 @@
         "platforms": "n/a",
         "standards": "PURL v1.0",
         "notes": "n/a",
-        "logo": "img/favicon.ico"
+        "logo": "img/AboutCode-A.png"
     },
     {
         "name": "packageurl-ruby",
@@ -648,7 +648,7 @@
         "platforms": "n/a",
         "standards": "PURL v1.0, VERS",
         "notes": "n/a",
-        "logo": "img/nexB_icon.svg"
+        "logo": "img/AboutCode-A.png"
     },
     {
         "name": "Scancode.io",
@@ -669,7 +669,7 @@
         "platforms": "Container, Linux",
         "standards": "PURL v1.0, VERS",
         "notes": "n/a",
-        "logo": "img/nexB_icon.svg"
+        "logo": "img/AboutCode-A.png"
     },
     {
         "name": "Sonatype Lifecycle",
@@ -732,7 +732,7 @@
         "platforms": "n/a",
         "standards": "VERS",
         "notes": "n/a",
-        "logo": "img/nexB_icon.svg"
+        "logo": "img/AboutCode-A.png"
     },
      {
         "name": "VulnerableCode",
@@ -753,7 +753,7 @@
         "platforms": "Container, Linux",
         "standards": "PURL v1.0",
         "notes": "Coming soon: https://public2.vulnerablecode.io/.",
-        "logo": "img/nexB_icon.svg"
+        "logo": "img/AboutCode-A.png"
     },
     {
         "name": "ZEN SecDB",
