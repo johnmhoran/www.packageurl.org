@@ -21,7 +21,7 @@
         "logo": "n/a"
     },
     {
-        "name": "binaryanalysis-ng",
+        "name": "binaryanalysis-ng (BANG)",
         "publisher": "Armijn Hemel",
         "description": "BANG is a framework for processing binary files (like firmware).",
         "homepage_url": "https://github.com/armijnhemel/binaryanalysis-ng",
@@ -82,6 +82,27 @@
         "standards": "VERS",
         "notes": "See also https://www.npmjs.com/package/@csaf-rs/vers-rs",
         "logo": "n/a"
+    },
+    {
+        "name": "DefectDojo",
+        "publisher": "DefectDojo",
+        "description": "DefectDojo is a DevSecOps, ASPM (application security posture management), and vulnerability management tool.",
+        "homepage_url": "https://defectdojo.com/",
+        "repository_url": "https://github.com/DefectDojo/django-DefectDojo",
+        "source_download": "https://github.com/DefectDojo/django-DefectDojo/releases",
+        "package_download": "n/a",
+        "documentation_url": "n/a",
+        "service_url": "n/a",
+        "language": "HTML",
+        "software_license": "BSD-3-Clause",
+        "data_license": "n/a",
+        "service_license": "n/a",
+        "type": "Application",
+        "functions": "n/a",
+        "platforms": "n/a",
+        "standards": "PURL v1.0",
+        "notes": "n/a",
+        "logo": "img/DefectDojo.jpg"
     },
     {
         "name": "DejaCode",
@@ -145,48 +166,6 @@
         "standards": "PURL v1.0",
         "notes": "n/a",
         "logo": "img/dependency-track.png"
-    },
-    {
-        "name": "django-DefectDojo",
-        "publisher": "DefectDojo",
-        "description": "DefectDojo is a DevSecOps, ASPM (application security posture management), and vulnerability management tool.",
-        "homepage_url": "https://defectdojo.com/",
-        "repository_url": "https://github.com/DefectDojo/django-DefectDojo",
-        "source_download": "https://github.com/DefectDojo/django-DefectDojo/releases",
-        "package_download": "n/a",
-        "documentation_url": "n/a",
-        "service_url": "n/a",
-        "language": "HTML",
-        "software_license": "BSD-3-Clause",
-        "data_license": "n/a",
-        "service_license": "n/a",
-        "type": "Application",
-        "functions": "n/a",
-        "platforms": "n/a",
-        "standards": "PURL v1.0",
-        "notes": "n/a",
-        "logo": "img/DefectDojo.jpg"
-    },
-    {
-        "name": "Eclipse Steady",
-        "publisher": "Eclipse Steady",
-        "description": "Analyses your Java applications for open-source dependencies with known vulnerabilities, using both static analysis and testing to determine code context and usage for greater accuracy.",
-        "homepage_url": "https://github.com/eclipse-steady/steady",
-        "repository_url": "n/a",
-        "source_download": "https://github.com/eclipse-steady/steady/releases",
-        "package_download": "n/a",
-        "documentation_url": "n/a",
-        "service_url": "n/a",
-        "language": "Java",
-        "software_license": "Apache-2.0",
-        "data_license": "n/a",
-        "service_license": "n/a",
-        "type": "Application",
-        "functions": "n/a",
-        "platforms": "n/a",
-        "standards": "PURL v1.0",
-        "notes": "n/a",
-        "logo": "n/a"
     },
     {
         "name": "Ecosyste.ms",
@@ -311,7 +290,7 @@
         "functions": "n/a",
         "platforms": "n/a",
         "standards": "PURL v1.0",
-        "notes": "n/a",
+        "notes": "Maven Central displays a PURL for packages, but does not currently support PURLs in search.",
         "logo": "n/a"
     },
     {
@@ -815,7 +794,7 @@
         "functions": "n/a",
         "platforms": "n/a",
         "standards": "PURL v1.0",
-        "notes": "See also https://www.sonatype.com/products/sonatype-guide/oss-index-users and https://www.sonatype.com/blog/the-evolution-of-oss-index-in-the-age-of-ai.",
+        "notes": "Access to the Sonatype Guide requires creating an account. There is a free account option.",
         "logo": "img/sonatype.png"
     },
     {
@@ -838,27 +817,6 @@
         "standards": "PURL v1.0",
         "notes": "n/a",
         "logo": "img/sonatype.png"
-    },
-    {
-        "name": "SPDX-Builder",
-        "publisher": "Philips Software",
-        "description": "Generates SPDX bill-of-material files from a package input and license scan",
-        "homepage_url": "https://github.com/philips-software/spdx-builder",
-        "repository_url": "n/a",
-        "source_download": "https://github.com/philips-software/spdx-builder/releases",
-        "package_download": "n/a",
-        "documentation_url": "n/a",
-        "service_url": "n/a",
-        "language": "Java",
-        "software_license": "MIT",
-        "data_license": "n/a",
-        "service_license": "n/a",
-        "type": "Application",
-        "functions": "n/a",
-        "platforms": "n/a",
-        "standards": "PURL v1.0",
-        "notes": "n/a",
-        "logo": "img/philips-software.png"
     },
     {
         "name": "Spectra Assure",
