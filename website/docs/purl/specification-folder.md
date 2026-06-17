@@ -20,9 +20,8 @@ reference to the "PURL specification" may refer to information from
 [purl-spec](https://github.com/package-url/purl-spec) repository on GitHub.
 
 The key elements of **ECMA-427** are:
-- [Introduction{(https://ecma-tc54.github.io/ECMA-427/#sec-intro):
-- This text is also available on this website as the
-- [Introduction](https://package-url.github.io/www.packageurl.org/docs/purl/introduction) above.
+- [Introduction](https://ecma-tc54.github.io/ECMA-427/#sec-intro): This text is also available
+on this website as the [Introduction](https://package-url.github.io/www.packageurl.org/docs/purl/introduction) above.
 - [Clause 1 - Scope](https://ecma-tc54.github.io/ECMA-427/#sec-scope): A brief statement
  of the ECMA-427 scope.
 - [Clause 2 - Conformance](https://ecma-tc54.github.io/ECMA-427/#sec-conformance):
