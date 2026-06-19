@@ -1,0 +1,67 @@
+name: Sync purl-spec Type Definitions
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # daily at 06:00 UTC
+  workflow_dispatch:       # manual trigger for testing
+
+jobs:
+  sync-types-doc:
+    name: Sync types-doc from purl-spec
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write      # push sync commit to main
+
+    steps:
+      - name: Checkout website repo
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+        with:
+          # Fine-grained PAT (Contents: read+write on this repo only).
+          # A push via GITHUB_TOKEN does not trigger downstream workflows;
+          # this PAT does. Update secret and this comment when token is renewed.
+          # Expires: 2027-06-19.
+          token: ${{ secrets.SYNC_PAT }}
+          ref: main
+          fetch-depth: 0
+
+      - name: Sparse-checkout purl-spec types-doc
+        run: |
+          git clone \
+            --depth 1 \
+            --filter=blob:none \
+            --sparse \
+            https://github.com/package-url/purl-spec.git \
+            /tmp/purl-spec
+          cd /tmp/purl-spec
+          git sparse-checkout set types-doc
+
+      - name: Capture purl-spec HEAD commit SHA
+        id: purl-spec-sha
+        run: |
+          SHA=$(git -C /tmp/purl-spec rev-parse HEAD)
+          echo "sha=${SHA}" >> $GITHUB_OUTPUT
+          echo "sha_short=${SHA:0:7}" >> $GITHUB_OUTPUT
+
+      - name: Copy type definition files
+        run: |
+          mkdir -p website/docs/purl-spec/types-doc
+          # --delete ensures files retired from purl-spec are removed here too.
+          # Retired files remain recoverable via git history.
+          rsync -av --delete \
+            /tmp/purl-spec/types-doc/ \
+            website/docs/purl-spec/types-doc/
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add website/docs/purl-spec/types-doc/
+          if git diff --cached --quiet; then
+            echo "No changes — types-doc already up to date with purl-spec@${{ steps.purl-spec-sha.outputs.sha_short }}"
+          else
+            git pull --rebase origin main
+            git commit \
+              -m "chore: sync types-doc from purl-spec@${{ steps.purl-spec-sha.outputs.sha_short }}" \
+              -m "Source: https://github.com/package-url/purl-spec/commit/${{ steps.purl-spec-sha.outputs.sha }}"
+            git push origin main
+          fi
