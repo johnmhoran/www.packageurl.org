@@ -239,7 +239,7 @@ const config = {
                         position: 'right',
                     },
                     {
-                        href: 'https://cyclonedx.slack.com',
+                        href: 'https://join.slack.com/t/aboutcode-org/shared_invite/zt-31uzazd7l-tBHcqKUKkX6jUEPRLswiNw',
                         label: 'Slack',
                         position: 'right',
                     },
