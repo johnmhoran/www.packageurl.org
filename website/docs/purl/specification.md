@@ -80,13 +80,13 @@ defined.
   or in a PURL qualifier.
 
 - Version control system (VCS) URLs such **git://**, **svn://**, **hg://** or
-as defined in Python pip or SPDX download locations are not valid PURL types.
+  as defined in Python pip or SPDX download locations are not valid PURL types.
   They are valid URL or URI schemes but they are not a valid PURL scheme.
   They are a closely related, compact and uniform way to reference VCS URLs.
   They may be used as references in separate attributes outside of a PURL or
   in a PURL qualifier.
 
-  ## Permitted characters
+## Permitted characters
 
 A canonical PURL is composed of these permitted ASCII characters:
 
