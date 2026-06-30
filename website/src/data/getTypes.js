@@ -186,6 +186,11 @@ export default function getPackages(baseUrl) {
             logo: `${baseUrl}img/Swift_logo_color.svg`,
         },
         {
+            name: "vcpkg",
+            url: `${baseUrl}docs/purl-spec/types/definitions/vcpkg-definition`,
+            logo: `${baseUrl}img/vcpkg-mark`,
+        },
+        {
             name: "vscode-extension",
             url: `${baseUrl}docs/purl-spec/types/definitions/vscode-extension-definition`,
             logo: `${baseUrl}img/vscode.svg`,
