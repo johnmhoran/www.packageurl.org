@@ -86,6 +86,11 @@ export default function getPackages(baseUrl) {
             logo: "n/a",
         },
         {
+            name: "git",
+            url: `${baseUrl}docs/purl-spec/types/definitions/git-definition`,
+            logo: `${baseUrl}img/Git-Icon-1788C.png`,
+        },
+        {
             name: "github",
             url: `${baseUrl}docs/purl-spec/types/definitions/github-definition`,
             logo: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
