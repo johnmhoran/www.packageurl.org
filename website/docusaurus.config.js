@@ -90,7 +90,8 @@ const config = {
                             'vers/specification-folder.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers/specification.md': `https://github.com/package-url/vers-spec/blob/main/docs/standard/specification.md`,
                             'vers/tests.md': `https://github.com/package-url/vers-spec/blob/main/docs/tests.md`,
-                            'vers/version-schemes.md': `https://github.com/package-url/vers-spec/blob/main/docs/version-schemes.md`,
+                            // Match the change made in vers-spec.
+                            'vers/types.md': `https://github.com/package-url/vers-spec/blob/main/docs/types.md`,
 
                             // "Particpate"
                             'participate/contribute.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
@@ -186,9 +187,10 @@ const config = {
                                 to: '/docs/vers/tests',
                                 label: 'VERS test overview',
                             },
+                            // Match the change made in vers-spec.
                             {
-                                to: '/docs/vers/version-schemes',
-                                label: 'Version schemes',
+                                to: '/docs/vers/types',
+                                label: 'VERS types',
                             },
                             {
                                 to: '/docs/vers/schemas',

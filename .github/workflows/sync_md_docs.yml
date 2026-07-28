@@ -1,0 +1,84 @@
+name: Sync markdown docs from purl-spec and vers-spec
+
+on:
+  schedule:
+    - cron: '0 1 * * *'  # daily at 01:00 UTC
+  workflow_dispatch: {}  # manual trigger for testing
+
+concurrency:
+  group: sync-md-docs
+  cancel-in-progress: false  # let an in-flight sync finish rather than killing a partial commit/PR update
+
+jobs:
+  sync:
+    permissions:
+      contents: read  # the job elevates only where it needs to, via the PAT used below
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout www.packageurl.org (this repo)
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+        with:
+          token: ${{ secrets.SYNC_PAT }}  # fine-grained PAT: Contents + Pull requests, read+write
+          fetch-depth: 0
+
+      - name: Sparse checkout purl-spec source paths
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+        with:
+          repository: package-url/purl-spec
+          path: _sources/purl-spec
+          sparse-checkout: |
+            docs/specification
+            docs/tests
+          sparse-checkout-cone-mode: false
+
+      - name: Sparse checkout vers-spec source paths
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+        with:
+          repository: package-url/vers-spec
+          path: _sources/vers-spec
+          sparse-checkout: |
+            docs/specification
+            docs/tests
+            docs/types
+          sparse-checkout-cone-mode: false
+
+      - name: Set up Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: "3.12"
+
+      - name: Run sync script
+        id: sync
+        run: python .github/scripts/sync_md_docs.py --manifest .github/scripts/sync-manifest.json --sources-root _sources --dest .
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open pull request
+        if: steps.diff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1  # v8.1.1
+        with:
+          token: ${{ secrets.SYNC_PAT }}
+          commit-message: "chore: sync docs from purl-spec/vers-spec [automated]"
+          author: purl-docs-sync-bot <actions@users.noreply.github.com>
+          committer: purl-docs-sync-bot <actions@users.noreply.github.com>
+          branch: sync/auto-docs-update
+          delete-branch: true   # clean up the branch once the PR is merged or closed
+          title: "chore: sync docs from purl-spec/vers-spec"
+          body: |
+            Automated sync of .md files from purl-spec and vers-spec into
+            website/docs/, per .github/scripts/sync-manifest.json.
+
+            The "build" job in A-B-deployment.yml runs on this PR as a check --
+            confirm it passes before merging. Merging (or enabling auto-merge)
+            triggers the real deploy.
+
+      - name: No changes
+        if: steps.diff.outputs.changed == 'false'
+        run: echo "Source files unchanged -- nothing to sync."

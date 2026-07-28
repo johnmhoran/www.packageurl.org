@@ -37,7 +37,8 @@ const sidebars = {
             ],
         },
         'vers/tests',
-        'vers/version-schemes',
+        // Match the change made in vers-spec.
+        'vers/types',
         'vers/schemas',
         'vers/faq',
     ],
