@@ -27,7 +27,7 @@
   {
     "repo": "purl-spec",
     "source": "docs/tests/test-overview.md",
-    "dest": "website/docs/purl/tests.md"
+    "dest": "website/docs/purl/test-overview.md"
   },
   {
     "repo": "vers-spec",
@@ -47,11 +47,11 @@
   {
     "repo": "vers-spec",
     "source": "docs/tests/test-overview.md",
-    "dest": "website/docs/vers/tests.md"
+    "dest": "website/docs/vers/test-overview.md"
   },
   {
     "repo": "vers-spec",
     "source": "docs/types/vers-types.md",
-    "dest": "website/docs/vers/version-schemes.md"
+    "dest": "website/docs/vers/vers-types.md"
   }
 ]

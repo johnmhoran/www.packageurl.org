@@ -1,11 +1,11 @@
 ---
-id: version-schemes
-title: Version schemes
-sidebar_label: Version schemes
+id: vers-types
+title: VERS types
+sidebar_label: VERS types
 hide_table_of_contents: false
 ---
 
-# Version schemes
+# VERS types
 
 There is a very wide range of software version schemes. For the development of
 the VERS specification, we are focused on three types of version schemes:
