@@ -24,4 +24,4 @@ The VERS test files are available at: https://github.com/package-url/vers-spec/t
 - <a href="https://github.com/package-url/vers-spec/blob/main/schemas/vers-test.schema-0.1.json" target="_blank">JSON Schema</a> `↗`
 - <a href="/interactive_schemas/vers-test.schema-0.1.html" target="_blank">Interactive HTML</a> `↗`
 
-See the [VERS test overview](/docs/vers/tests) page for more information about testing VERS.
+See the [VERS test overview](/docs/vers/test-overview) page for more information about testing VERS.

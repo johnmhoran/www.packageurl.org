@@ -80,7 +80,7 @@ const config = {
                             'purl/schemas.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'purl/specification-folder.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'purl/specification.md': `https://github.com/package-url/purl-spec/blob/main/docs/specification/standard/specification.md`,
-                            'purl/tests.md': `https://github.com/package-url/purl-spec/blob/main/docs/tests/test-overview.md`,
+                            'purl/test-overview.md': `https://github.com/package-url/purl-spec/blob/main/docs/tests/test-overview.md`,
 
                             // "VERS" section
                             'vers/faq.md': `https://github.com/package-url/vers-spec/blob/main/docs/faq.md`,
@@ -89,9 +89,9 @@ const config = {
                             'vers/schemas.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers/specification-folder.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers/specification.md': `https://github.com/package-url/vers-spec/blob/main/docs/standard/specification.md`,
-                            'vers/tests.md': `https://github.com/package-url/vers-spec/blob/main/docs/tests.md`,
+                            'vers/test-overview.md': `https://github.com/package-url/vers-spec/blob/main/docs/test-overview.md`,
                             // Match the change made in vers-spec.
-                            'vers/types.md': `https://github.com/package-url/vers-spec/blob/main/docs/types.md`,
+                            'vers/vers-types.md': `https://github.com/package-url/vers-spec/blob/main/docs/vers-types.md`,
 
                             // "Particpate"
                             'participate/contribute.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
@@ -156,7 +156,7 @@ const config = {
                                 label: 'Specification',
                             },
                             {
-                                to: '/docs/purl/tests',
+                                to: '/docs/purl/test-overview',
                                 label: 'PURL test overview',
                             },
                             {
@@ -184,12 +184,12 @@ const config = {
                                 label: 'Specification',
                             },
                             {
-                                to: '/docs/vers/tests',
+                                to: '/docs/vers/test-overview',
                                 label: 'VERS test overview',
                             },
                             // Match the change made in vers-spec.
                             {
-                                to: '/docs/vers/types',
+                                to: '/docs/vers/vers-types',
                                 label: 'VERS types',
                             },
                             {
