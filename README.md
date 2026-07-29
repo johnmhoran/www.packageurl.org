@@ -49,6 +49,6 @@ configuration. There are two primary ways to update the website:
           `.json` files.
     - Otherwise the markdown page will be located at `package-url/www.packageurl.org/website/docs`
 
-  You can use the GitHub UI to create a new branch and PR or you can create 
-  a branch and PR locally in your preferred GitHub tools.
+You can use the GitHub UI to create a new branch and PR or you can create 
+a branch and PR locally in your preferred GitHub tools.
 
