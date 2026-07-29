@@ -7,16 +7,16 @@ hide_table_of_contents: true
 
 # How to parse a PURL
 
-## How to parse a **PURL** string into its components
+## How to parse a PURL string into its components
 
-Parsing a **PURL** ASCII string into its components works from right to left,
+Parsing a PURL ASCII string into its components works from right to left,
 from **subpath** to **type**.
 
 Note: some extra type-specific normalizations are required.
 
-To parse a **PURL** string in its components:
+To parse a PURL string in its components:
 
-- Split the **PURL** string once from right on '#'
+- Split the PURL string once from right on '#'
 
   - The left side is the **remainder**
   - Split the right side on '/'
