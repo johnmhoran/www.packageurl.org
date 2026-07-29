@@ -1,0 +1,57 @@
+[
+  {
+    "repo": "purl-spec",
+    "source": "docs/specification/common-qualifiers.md",
+    "dest": "website/docs/purl/common-qualifiers.md"
+  },
+  {
+    "repo": "purl-spec",
+    "source": "docs/specification/how-to-build.md",
+    "dest": "website/docs/purl/how-to-build.md"
+  },
+  {
+    "repo": "purl-spec",
+    "source": "docs/specification/how-to-parse.md",
+    "dest": "website/docs/purl/how-to-parse.md"
+  },
+  {
+    "repo": "purl-spec",
+    "source": "docs/specification/standard/introduction.md",
+    "dest": "website/docs/purl/introduction.md"
+  },
+  {
+    "repo": "purl-spec",
+    "source": "docs/specification/standard/specification.md",
+    "dest": "website/docs/purl/specification.md"
+  },
+  {
+    "repo": "purl-spec",
+    "source": "docs/tests/test-overview.md",
+    "dest": "website/docs/purl/test-overview.md"
+  },
+  {
+    "repo": "vers-spec",
+    "source": "docs/specification/how-to-parse.md",
+    "dest": "website/docs/vers/how-to-parse.md"
+  },
+  {
+    "repo": "vers-spec",
+    "source": "docs/specification/standard/introduction.md",
+    "dest": "website/docs/vers/introduction.md"
+  },
+  {
+    "repo": "vers-spec",
+    "source": "docs/specification/standard/specification.md",
+    "dest": "website/docs/vers/specification.md"
+  },
+  {
+    "repo": "vers-spec",
+    "source": "docs/tests/test-overview.md",
+    "dest": "website/docs/vers/test-overview.md"
+  },
+  {
+    "repo": "vers-spec",
+    "source": "docs/types/vers-types.md",
+    "dest": "website/docs/vers/vers-types.md"
+  }
+]
