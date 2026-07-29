@@ -84,14 +84,14 @@ const config = {
 
                             // "VERS" section
                             'vers/faq.md': `https://github.com/package-url/vers-spec/blob/main/docs/faq.md`,
-                            'vers/how-to-parse.md': `https://github.com/package-url/vers-spec/blob/main/docs/how-to-parse.md`,
-                            'vers/introduction.md': `https://github.com/package-url/vers-spec/blob/main/docs/standard/introduction.md`,
+                            'vers/how-to-parse.md': `https://github.com/package-url/vers-spec/blob/main/docs/specification/how-to-parse.md`,
+                            'vers/introduction.md': `https://github.com/package-url/vers-spec/blob/main/docs/specification/standard/introduction.md`,
                             'vers/schemas.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers/specification-folder.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
-                            'vers/specification.md': `https://github.com/package-url/vers-spec/blob/main/docs/standard/specification.md`,
-                            'vers/test-overview.md': `https://github.com/package-url/vers-spec/blob/main/docs/test-overview.md`,
+                            'vers/specification.md': `https://github.com/package-url/vers-spec/blob/main/docs/specification/standard/specification.md`,
+                            'vers/test-overview.md': `https://github.com/package-url/vers-spec/blob/main/docs/tests/test-overview.md`,
                             // Match the change made in vers-spec.
-                            'vers/vers-types.md': `https://github.com/package-url/vers-spec/blob/main/docs/vers-types.md`,
+                            'vers/vers-types.md': `https://github.com/package-url/vers-spec/blob/main/docs/types/vers-types.md`,
 
                             // "Particpate"
                             'participate/contribute.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
