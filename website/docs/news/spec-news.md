@@ -35,7 +35,7 @@ The PURL team is planning major upgrades to the PURL test suite with this new
 data structure. 
 - The test cases based on the `schemas/purl-test.schema-0.1.json` will remain
   available in the `purl-spec/tests/` folder under the v1.0.1 release tag.
-- The PURL team is in the process of applying the `purl-test.schema-0.2.json'
+- The PURL team is in the process of applying the `purl-test.schema-0.2.json`
   changes to all existing test case files. We will publish PURL Spec Release 
   1.1.0 after the test cases are updated to match the new schema.
 
@@ -48,7 +48,7 @@ data structure.
 ## PURL Spec Release v1.0.1
 **Date**: August 3, 2026
 
-**Details**: Release v1.0.1 of the [purl-spec](https://github.com/package-url/purl-spec/releases/tag/v1.1.0) project includes the registration of 7 new PURL 
+**Details**: Release v1.0.1 of the [purl-spec](https://github.com/package-url/purl-spec/releases/tag/v1.0.1) project includes the registration of 7 new PURL 
 types:
 - brew: for Homebrew for macOS and Linux
 - chrome-extension: for Chrome browser extensions
