@@ -242,6 +242,22 @@ const config = {
                             },
                         ],
                     },
+                    {
+                        label: 'News',
+                        to: '/docs/news/community-news',
+                        position: 'left',
+                        activeBaseRegex: `^${siteConfig[deployTarget].baseUrl}docs/news/`,
+                        items: [
+                            {
+                                to: '/docs/news/community-news',
+                                label: 'Community News',
+                            },
+                            {
+                                to: '/docs/news/spec-news',
+                                label: 'Specification News',
+                            },
+                        ],
+                    },
 
                     {
                         href: 'https://github.com/package-url/',
