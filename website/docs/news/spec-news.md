@@ -9,7 +9,7 @@ hide_table_of_contents: true
 
 Stay up to date with important news about the PURL and VERS specifications.
 
-## Test Schema v0.2 for PURL and VERS
+## PURL Test Schema v0.2
 **Date**: August 4, 2026
 
 **Details**: We implemented a very important update to the PURL test schema - 
