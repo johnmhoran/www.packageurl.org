@@ -5,11 +5,11 @@ sidebar_label: Specification News
 hide_table_of_contents: true
 ---
 
-# Specification News
+## Specification News
 
 Stay up to date with important news about the PURL and VERS specifications.
 
-## PURL Test Schema v0.2
+### PURL Test Schema v0.2
 **Date**: August 4, 2026
 
 **Details**: We implemented a very important update to the PURL test schema -
@@ -40,12 +40,13 @@ data structure.
   1.1.0 after the test cases are updated to match the new schema.
 
 
-## VERS Spec Release v1.0.0
+### VERS Spec Release v1.0.0
 **Date**: August 4, 2026
+
 **Details**: Release v1.0.0 of the [vers-spec](https://github.com/package-url/vers-spec/releases/tag/v1.0.0) is the first release for VERS.
 
 
-## PURL Spec Release v1.0.1
+### PURL Spec Release v1.0.1
 **Date**: August 3, 2026
 
 **Details**: Release v1.0.1 of the [purl-spec](https://github.com/package-url/purl-spec/releases/tag/v1.0.1) project includes the registration of 7 new PURL
