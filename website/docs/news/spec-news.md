@@ -1,11 +1,9 @@
 ---
 id: spec-news
-title: Specification News
+title: PURL/VERS Specification News
 sidebar_label: Specification News
 hide_table_of_contents: true
 ---
-
-## Specification News
 
 Stay up to date with important news about the PURL and VERS specifications.
 
