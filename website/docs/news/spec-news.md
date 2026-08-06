@@ -1,7 +1,7 @@
 ---
 id: spec-news
 title: Specification News
-sidebar_label: Specifications
+sidebar_label: Specification News
 hide_table_of_contents: true
 ---
 
