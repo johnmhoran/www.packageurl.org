@@ -61,6 +61,10 @@ const sidebars = {
         'participate/meetings',
         'participate/events',
     ],
+    news: [
+        'news/community-news',
+        'news/spec-news',
+    ],
 };
 
 export default sidebars;
