@@ -30,6 +30,16 @@
     "dest": "website/docs/purl/test-overview.md"
   },
   {
+    "repo": "purl-spec",
+    "source": "docs/tests/test-schema-changes.md",
+    "dest": "website/docs/purl/test-schema-changes.md"
+  },
+  {
+    "repo": "purl-spec",
+    "source": "docs/tests/test-suite.md",
+    "dest": "website/docs/purl/test-suite.md"
+  },
+  {
     "repo": "vers-spec",
     "source": "docs/specification/how-to-parse.md",
     "dest": "website/docs/vers/how-to-parse.md"
