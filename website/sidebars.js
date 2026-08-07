@@ -17,7 +17,20 @@ const sidebars = {
                 'purl/how-to-parse',
             ],
         },
-        'purl/test-overview',
+        {
+            type: 'category',
+            label: 'Tests',
+            link: {
+                type: 'doc',
+                id: 'purl/tests-folder', // The doc to display
+            },
+            collapsed: false,
+            items: [
+                'purl/test-overview',
+                'purl/test-suite',
+                'purl/test-schema-changes',
+            ],
+        },
         'purl/purl-types',
         'purl/schemas',
     ],
