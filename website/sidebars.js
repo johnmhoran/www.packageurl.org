@@ -49,7 +49,20 @@ const sidebars = {
                 'vers/how-to-parse',
             ],
         },
-        'vers/test-overview',
+        {
+            type: 'category',
+            label: 'Tests',
+            link: {
+                type: 'doc',
+                id: 'vers/tests-folder', // The doc to display
+            },
+            collapsed: false,
+            items: [
+                'vers/test-overview',
+                'vers/test-suite',
+                'vers/test-schema-changes',
+            ],
+        },
         'vers/vers-types',
         'vers/schemas',
         'vers/faq',
