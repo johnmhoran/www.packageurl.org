@@ -93,8 +93,12 @@ const config = {
                             'vers/schemas.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers/specification-folder.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers/specification.md': `https://github.com/package-url/vers-spec/blob/main/docs/specification/standard/specification.md`,
+
+                            'vers/tests-folder.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers/test-overview.md': `https://github.com/package-url/vers-spec/blob/main/docs/tests/test-overview.md`,
-                            // Match the change made in vers-spec.
+                            'vers/test-suite.md': `https://github.com/package-url/vers-spec/blob/main/docs/tests/test-suite.md`,
+                            'vers/test-schema-changes.md': `https://github.com/package-url/vers-spec/blob/main/docs/tests/test-schema-changes.md`,
+
                             'vers/vers-types.md': `https://github.com/package-url/vers-spec/blob/main/docs/types/vers-types.md`,
 
                             // "Particpate"
@@ -188,10 +192,9 @@ const config = {
                                 label: 'Specification',
                             },
                             {
-                                to: '/docs/vers/test-overview',
-                                label: 'VERS test overview',
+                                to: '/docs/vers/tests-folder',
+                                label: 'Tests',
                             },
-                            // Match the change made in vers-spec.
                             {
                                 to: '/docs/vers/vers-types',
                                 label: 'VERS types',

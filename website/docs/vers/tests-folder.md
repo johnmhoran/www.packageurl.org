@@ -18,7 +18,7 @@ dimensions:
   test cases that illustrate how to normalize VERS input data to canonical
   form.
 - **Test type**: tests for various VERS use cases:
-  - 'build: A test case to build a canonical VERS string from decoded
+  - 'build': A test case to build a canonical VERS string from decoded
     components.
   - 'comparison': A test case to sort an input version string array using the
     applicable VERS **type** rules.
@@ -43,4 +43,3 @@ See the following for more detailed information:
   test cases with details about test case properties
 - **Test schema changes**: explains the differences between v0.2 and v0.1 of
   the VERS test schema
-
