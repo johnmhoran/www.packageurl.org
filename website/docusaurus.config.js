@@ -79,7 +79,7 @@ const config = {
                             'purl/purl-types.mdx': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'purl/schemas.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'purl/specification-folder.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
-                            'purl/specification.md': `https://github.com/package-url/purl-spec/blob/main/docs/specification/standard/specification.md`,
+                            'purl/spec-placeholder.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
 
                             'purl/tests-folder.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'purl/test-overview.md': `https://github.com/package-url/purl-spec/blob/main/docs/tests/test-overview.md`,
