@@ -16,11 +16,6 @@
   },
   {
     "repo": "purl-spec",
-    "source": "docs/specification/standard/introduction.md",
-    "dest": "website/docs/purl/introduction.md"
-  },
-  {
-    "repo": "purl-spec",
     "source": "docs/tests/test-overview.md",
     "dest": "website/docs/purl/test-overview.md"
   },
