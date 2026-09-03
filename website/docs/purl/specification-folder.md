@@ -8,7 +8,7 @@ hide_table_of_contents: true
 # Specification
 
 The PURL (Package-URL) specification has been standardized with
-[ECMA-427](https://ecma-international.org/publications-and-standards/standards/ecma-427/).
+[ECMA-427 1st Edition](https://ecma-international.org/publications-and-standards/standards/ecma-427/).
 The content of **ECMA-427** is a subset of the overall PURL specification but
 its content defines the normative standard.
 Some elements of the specification that are not currently included in 
