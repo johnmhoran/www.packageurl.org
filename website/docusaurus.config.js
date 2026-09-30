@@ -90,7 +90,6 @@ const config = {
                             'vers/faq.md': `https://github.com/package-url/vers-spec/blob/main/docs/faq.md`,
                             'vers/how-to-parse.md': `https://github.com/package-url/vers-spec/blob/main/docs/specification/how-to-parse.md`,
                             'vers/introduction.md': `https://github.com/package-url/vers-spec/blob/main/docs/specification/standard/introduction.md`,
-                            'vers/schemas.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers/specification-folder.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers/specification.md': `https://github.com/package-url/vers-spec/blob/main/docs/specification/standard/specification.md`,
 
