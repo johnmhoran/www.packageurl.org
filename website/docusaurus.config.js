@@ -97,7 +97,7 @@ const config = {
                             'vers/tests-folder.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers/test-overview.md': `https://github.com/package-url/vers-spec/blob/main/docs/tests/test-overview.md`,
                             'vers/test-suite.md': `https://github.com/package-url/vers-spec/blob/main/docs/tests/test-suite.md`,
-                            'vers/test-schema-changes.md': `https://github.com/package-url/vers-spec/blob/main/docs/tests/test-schema-changes.md`,
+                            'vers/test-schema.md': `https://github.com/package-url/vers-spec/blob/main/docs/tests/test-schema.md`,
 
                             'vers/vers-types.md': `https://github.com/package-url/vers-spec/blob/main/docs/types/vers-types.md`,
 
