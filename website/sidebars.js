@@ -60,11 +60,10 @@ const sidebars = {
             items: [
                 'vers/test-overview',
                 'vers/test-suite',
-                'vers/test-schema-changes',
+                'vers/test-schema',
             ],
         },
         'vers/vers-types',
-        'vers/schemas',
         'vers/faq',
     ],
     getting_started: [
