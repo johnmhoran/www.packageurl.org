@@ -17,7 +17,9 @@
 </head>
 <body onload="anchorOnLoad();" id="root">
 
-     <h1>Package-URL test definition</h1><span class="badge badge-dark value-type">Type: object</span><br/>
+    
+                     <h1>purl-test.schema-0.1.json</h1>
+            <span class="badge badge-dark value-type">Type: object</span><br/>
 <span class="description"><p>Schema for Package-URL building and parsing tests with input and expected output.</p>
 </span> <span class="badge badge-info no-additional">No Additional Properties</span>
         
@@ -40,9 +42,9 @@
              data-parent="#accordionschema">
             <div class="card-body pl-5">
 
-    <h4>JSON schema</h4><span class="badge badge-dark value-type">Type: object</span><span class="badge badge-info value-type">Format: uri</span><br/>
+    <h4>JSON schema</h4><span class="badge badge-dark value-type">Type: const</span><span class="badge badge-info value-type">Format: uri</span><br/>
 <span class="description"><p>Contains the URL of the JSON schema for Package-URL tests.</p>
-</span>
+</span><span class="const-value" id="schema_const">Specific value: <code>"https://packageurl.org/schemas/purl-test.schema-0.1.json"</code></span>
         
 
         
@@ -1475,11 +1477,11 @@
 </span><div class="enum-value" id="tests_items_test_type_enum">
             <h4>Must be one of:</h4>
             <ul class="list-group"><li class="list-group-item enum-item"><strong>"build"</strong>
-                        : <p>A PURL building test from decoded components to a canonical PURL string.</p>
+                        : <p>A test to build a canonical PURL output string from an input of decoded PURL components.</p>
 </li><li class="list-group-item enum-item"><strong>"parse"</strong>
-                        : <p>A PURL building test from decoded components to a canonical PURL string.</p>
+                        : <p>A test to parse a PURL input string into a set of decoded components.</p>
 </li><li class="list-group-item enum-item"><strong>"roundtrip"</strong>
-                        : <p>A PURL roundtrip test, parsing then building back a PURL from a canonical string input.</p>
+                        : <p>A test to produce a canonical PURL output string from an input PURL string.</p>
 </li></ul>
             </div>
         
@@ -1534,7 +1536,7 @@
             <div class="card-body pl-5">
 
     <h4>Expected failure reason</h4><span class="badge badge-dark value-type">Type: string or null</span> <span class="badge badge-success default-value">Default: null</span><br/>
-<span class="description"><p>The reason why this test is is expected to fail if expected_failure is true.</p>
+<span class="description"><p>The reason why this test is expected to fail if expected_failure is true.</p>
 </span>
         
 
@@ -1554,6 +1556,6 @@
 </div>
 
     <footer>
-        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on 2025-09-30 at 18:26:57 -0700</p>
+        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on 2026-09-30 at 16:45:48 -0700</p>
     </footer></body>
 </html>
