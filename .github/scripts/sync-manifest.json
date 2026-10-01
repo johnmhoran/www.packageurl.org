@@ -36,7 +36,7 @@
   },
   {
     "repo": "vers-spec",
-    "source": "docs/specification/standard/introduction.md",
+    "source": "docs/specification/standard/Introduction.md",
     "dest": "website/docs/vers/introduction.md"
   },
   {
