@@ -199,10 +199,6 @@ const config = {
                                 label: 'VERS types',
                             },
                             {
-                                to: '/docs/vers/schemas',
-                                label: 'Schemas',
-                            },
-                            {
                                 to: '/docs/vers/faq',
                                 label: 'FAQ',
                             },
