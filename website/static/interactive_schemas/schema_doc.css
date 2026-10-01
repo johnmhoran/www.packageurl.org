@@ -180,7 +180,13 @@ body {
 .highlight .vm { color: #bb60d5 } /* Name.Variable.Magic */
 .highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */
 
-/* JMH 2025-09-26 Friday 11:51:54 (Pac.) */
+/* Reduce font, line-height etc. -- better use of real estate, and add some color at the top */
+
+button.property-name-button {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 /* Add arrow indicator to schema property buttons */
 button.property-name-button::before {
   content: "▶";
@@ -201,134 +207,56 @@ button.property-name-button[aria-expanded="true"]::before {
 
 /* No bold */
 .badge {
-    display: inline-block;
-    padding: .25em .4em;
-	padding: .25em .4em .1em .4em;
+  display: inline-block;
 	padding: .35em .4em .2em .4em;
-    font-size: 75%;
 	font-size: 15px !important;
-    font-weight: 700;
 	font-weight: 500;
-    line-height: 1;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .25rem;
-
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
 }
 
 .badge-warning {
-    color: #212529;
-    background-color: #ffc107;
-
-    color: #000000;
-    background-color: #ffcc00;
-	background-color: #ffe680;
-	background-color: #ffd7b3;
-
-    background-color: #ffffcc;
-    background-color: #ffe6b3;
-}
-
-h1 {
-	background-color: #e8e8e8;
-	padding: .35em .4em .2em .4em;
+  color: #000000;
+  background-color: #ffe6b3;
 }
 
 /* Freeze the h1 at the top. */
 h1 {
   position: sticky;
   top: 0;
-  background: white; /* ensure it doesn’t overlap with text behind */
-  background: #f2f2f2;
-  background: linear-gradient(to right, #e6f2ff, #f2f8ff); /* soft light blues */
-  background: linear-gradient(to right, #cce6ff, #4da6ff);
-  background: linear-gradient(to right, #70dbdb, #4da6ff);
-  /* background: linear-gradient(to right, #4da6ff, #70dbdb); */
-  /* background: linear-gradient(to right, #80bfff, #70dbdb); */
-
-  /* background: linear-gradient(to right, #0066cc, #00b386); */
-  /* background: linear-gradient(to right, #0059b3, #66b3ff); */
-  background: linear-gradient(to right, #004d99, #66b3ff);
-  background: linear-gradient(to right, #004d99, #ffff99);
-  background: linear-gradient(to right, #0047b3, #80b3ff);
-  background: linear-gradient(to right, #003d99, #80b3ff);
-  background: linear-gradient(to right, #003d99, #99c2ff);
-  background: linear-gradient(to right, #0047b3, #99c2ff);
-  /* 2025-10-01 Wednesday 17:12:26.  */
-  background: #0047b3;
-  background: #3b5998;
-  background: #1E3A8A;
-  background: #0070F3;
-  background: #3366cc;
   background: #004d99;
-
   color: #ffffff;
-  /* color: #000000; */
   border-radius: 5px;
-
   z-index: 1000;     /* keep it above other content */
-  padding: 0.5em 0;  /* optional spacing */
-  padding: .35em .4em .2em .4em;
-  padding: .6em .4em .4em .4em;
-  /* 2025-10-01 Wednesday 17:11:09.  */
   padding: .4em .4em .2em .4em;
-
   border-bottom: 1px solid #ccc; /* optional visual divider */
-
   font-size: 2.25rem;
 }
 
 /* This seems to handle the "One of" blocks, pun intended. */
 h2.handle {
-    font-size: 1.5rem;
-    font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
-/* 2025-09-26 Friday 15:27:20.  This is from the "flat" template's folder */
+.h4, h4 {
+  padding-top: 10px;
+}
 
 .card-header {
-    padding: 0px !important;
-    /*padding: 10px !important;*/
-    padding-left: 10px !important;
-    padding-top: 4px !important;
-    padding-bottom: 4px !important;
+  padding: 0px !important;
+  padding-left: 10px !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
 }
 
 .card-body {
-    padding: 0px !important;
-    /*padding: 10px !important;*/
-    padding-left: 10px !important;
-    /* 2025-09-26 Friday 17:24:36.  */
-    padding-top: 10px !important;
-}
-
-.markdown-body .highlight pre, .markdown-body pre {
-    padding: 10px !important;
-}
-
-.language-json pre, .highlight pre, pre {
-    padding: 10px !important;
-}
-
-.examples {
-    padding: 10px !important;
-}
-
-
-/* 2025-09-26 Friday 15:35:12.  */
-.badge {
-    margin-top: 0.2rem;
-    margin-bottom: 0.2rem;
-}
-
-/* 2025-09-26 Friday 15:49:02.   */
-button.property-name-button {
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-
-/* 2025-10-01 Wednesday 17:16:41.   */
-.h4, h4 {
-    padding-top: 10px;
+  padding: 0px !important;
+  padding-left: 10px !important;
+  padding-top: 10px !important;
 }

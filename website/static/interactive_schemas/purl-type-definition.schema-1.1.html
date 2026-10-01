@@ -18,7 +18,7 @@
 <body onload="anchorOnLoad();" id="root">
 
     
-                     <h1>purl-type-definition.schema-1.0.json</h1>
+                     <h1>purl-type-definition.schema-1.1.json</h1>
             <span class="badge badge-dark value-type">Type: object</span><br/>
 <span class="description"><p>Schema to specify a Package-URL (PURL) type as a structured definition.</p>
 </span> <span class="badge badge-info no-additional">No Additional Properties</span>
@@ -44,7 +44,7 @@
 
     <h4>JSON schema</h4><span class="badge badge-dark value-type">Type: const</span><span class="badge badge-info value-type">Format: uri</span><br/>
 <span class="description"><p>Contains the URL of the JSON schema for Package-URL type definition.</p>
-</span><span class="const-value" id="schema_const">Specific value: <code>"https://packageurl.org/schemas/purl-type-definition.schema-1.0.json"</code></span>
+</span><span class="const-value" id="schema_const">Specific value: <code>"https://packageurl.org/purl-schemas/purl-type-definition.schema-1.1.json"</code></span>
         
 
         
@@ -71,7 +71,7 @@
 
     <h4>PURL type definition id</h4><span class="badge badge-dark value-type">Type: string</span><br/>
 <span class="description"><p>The unique identifier URI for this PURL type definition.</p>
-</span><span class="pattern-value" id="id_pattern">Must match regular expression: <code>^https:\/\/packageurl\.org/types/[a-z0-9-]+-definition\.json$</code></span>
+</span><span class="pattern-value" id="id_pattern">Must match regular expression: <code>^https:\/\/packageurl\.org/purl-types/[a-z0-9-]+-definition\.json$</code></span>
         
 
         
@@ -352,7 +352,7 @@
             <div class="card-body pl-5">
 
     <h4>Case sensitive</h4><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: true</span><br/>
-<span class="description"><p>true if this PURL component is case sensitive. If false, the canonical form shall be lowercased.</p>
+<span class="description"><p>true if this PURL component is case sensitive. If false, the form shall be lowercased.</p>
 </span>
         
 
@@ -549,6 +549,128 @@
         </div>
     </div>
 </div>
+<div class="accordion" id="accordionnamespace_definition_registered_values">
+    <div class="card">
+        <div class="card-header" id="headingnamespace_definition_registered_values">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#namespace_definition_registered_values"
+                        aria-expanded="" aria-controls="namespace_definition_registered_values" onclick="setAnchor('#namespace_definition_registered_values')"><span class="property-name">registered_values</span></button>
+            </h2>
+        </div>
+
+        <div id="namespace_definition_registered_values"
+             class="collapse property-definition-div" aria-labelledby="headingnamespace_definition_registered_values"
+             data-parent="#accordionnamespace_definition_registered_values">
+            <div class="card-body pl-5">
+
+    <h4>Registered namespace values</h4><span class="badge badge-dark value-type">Type: array of object</span><br/>
+<span class="description"><p>Optional set of registered namespace values for this PURL type. If the namespace value for a PURL of this type is not one of these registered values, a tool should report a warning. The registered namespace values should be sorted lexicographically.</p>
+</span>
+        
+
+        
+        
+
+        <p><span class="badge badge-light restriction min-items-restriction" id="namespace_definition_registered_values_minItems">Must contain a minimum of <code>1</code> items</span></p><p><span class="badge badge-light restriction unique-items-restriction" id="namespace_definition_registered_values_uniqueItems">All items must be unique</span></p> <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="namespace_definition_registered_values_items">
+            
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+ <span class="badge badge-info no-additional">No Additional Properties</span>
+        
+
+        
+        
+
+        
+<div class="accordion" id="accordionnamespace_definition_registered_values_items_value">
+    <div class="card">
+        <div class="card-header" id="headingnamespace_definition_registered_values_items_value">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#namespace_definition_registered_values_items_value"
+                        aria-expanded="" aria-controls="namespace_definition_registered_values_items_value" onclick="setAnchor('#namespace_definition_registered_values_items_value')"><span class="property-name">value</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="namespace_definition_registered_values_items_value"
+             class="collapse property-definition-div" aria-labelledby="headingnamespace_definition_registered_values_items_value"
+             data-parent="#accordionnamespace_definition_registered_values_items_value">
+            <div class="card-body pl-5">
+
+    <h4>Registered Namespace Value</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Registered namespace value for this PURL type.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionnamespace_definition_registered_values_items_description">
+    <div class="card">
+        <div class="card-header" id="headingnamespace_definition_registered_values_items_description">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#namespace_definition_registered_values_items_description"
+                        aria-expanded="" aria-controls="namespace_definition_registered_values_items_description" onclick="setAnchor('#namespace_definition_registered_values_items_description')"><span class="property-name">description</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="namespace_definition_registered_values_items_description"
+             class="collapse property-definition-div" aria-labelledby="headingnamespace_definition_registered_values_items_description"
+             data-parent="#accordionnamespace_definition_registered_values_items_description">
+            <div class="card-body pl-5">
+
+    <h4>Registered Namespace Description</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Explanation of what this namespace value means for this PURL type.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionnamespace_definition_registered_values_items_reference_url">
+    <div class="card">
+        <div class="card-header" id="headingnamespace_definition_registered_values_items_reference_url">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#namespace_definition_registered_values_items_reference_url"
+                        aria-expanded="" aria-controls="namespace_definition_registered_values_items_reference_url" onclick="setAnchor('#namespace_definition_registered_values_items_reference_url')"><span class="property-name">reference_url</span></button>
+            </h2>
+        </div>
+
+        <div id="namespace_definition_registered_values_items_reference_url"
+             class="collapse property-definition-div" aria-labelledby="headingnamespace_definition_registered_values_items_reference_url"
+             data-parent="#accordionnamespace_definition_registered_values_items_reference_url">
+            <div class="card-body pl-5">
+
+    <h4>Reference URL</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Optional Reference URL for where this namespace value is defined for this PURL type.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
             </div>
         </div>
     </div>
@@ -620,7 +742,7 @@
             <div class="card-body pl-5">
 
     <h4>Case sensitive</h4><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: true</span><br/>
-<span class="description"><p>true if this PURL component is case sensitive. If false, the canonical form shall be lowercased.</p>
+<span class="description"><p>true if this PURL component is case sensitive. If false, the form shall be lowercased.</p>
 </span>
         
 
@@ -827,7 +949,7 @@
             <div class="card-body pl-5">
 
     <h4>Case sensitive</h4><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: true</span><br/>
-<span class="description"><p>true if this PURL component is case sensitive. If false, the canonical form shall be lowercased.</p>
+<span class="description"><p>true if this PURL component is case sensitive. If false, the form shall be lowercased.</p>
 </span>
         
 
@@ -1045,7 +1167,7 @@
             <div class="card-body pl-5">
 
     <h4>Qualifier key requirement</h4><br/>
-<span class="description"><p>States that a PURL qualifier key is optional or required for a PURL type.</p>
+<span class="description"><p>States that a PURL qualifier key is optional, recommended or required for a PURL type.</p>
 </span><div class="one-of-value" id="qualifiers_definition_items_requirement_oneOf"><h2 class="handle">
   <label>One of</label>
 </h2><ul class="nav nav-tabs" id="tabsqualifiers_definition_items_requirement_oneOf_oneOf" role="tablist"><li class="nav-item">
@@ -1057,6 +1179,11 @@
             <a class="nav-link oneOf-option"
                id="qualifiers_definition_items_requirement_oneOf_i1" data-toggle="tab" href="#tab-pane_qualifiers_definition_items_requirement_oneOf_i1" role="tab"
                onclick="setAnchor('#qualifiers_definition_items_requirement_oneOf_i1')"
+            >Component recommended requirement</a>
+        </li><li class="nav-item">
+            <a class="nav-link oneOf-option"
+               id="qualifiers_definition_items_requirement_oneOf_i2" data-toggle="tab" href="#tab-pane_qualifiers_definition_items_requirement_oneOf_i2" role="tab"
+               onclick="setAnchor('#qualifiers_definition_items_requirement_oneOf_i2')"
             >Component required requirement</a>
         </li></ul>
 <div class="tab-content card"><div class="tab-pane fade card-body active show"
@@ -1078,11 +1205,26 @@
              id="tab-pane_qualifiers_definition_items_requirement_oneOf_i1" role="tabpanel">
             
 
+    <h4>Component recommended requirement</h4><span class="badge badge-dark value-type">Type: const</span><br/>
+<span class="description"><p>States that this PURL component is recommended for a PURL type.</p>
+</span>
+
+    <span class="const-value" id="qualifiers_definition_items_requirement_oneOf_i1_const">Specific value: <code>"recommended"</code></span>
+        
+
+        
+        
+
+        
+        </div><div class="tab-pane fade card-body "
+             id="tab-pane_qualifiers_definition_items_requirement_oneOf_i2" role="tabpanel">
+            
+
     <h4>Component required requirement</h4><span class="badge badge-dark value-type">Type: const</span><br/>
 <span class="description"><p>States that this PURL component is required for a PURL type.</p>
 </span>
 
-    <span class="const-value" id="qualifiers_definition_items_requirement_oneOf_i1_const">Specific value: <code>"required"</code></span>
+    <span class="const-value" id="qualifiers_definition_items_requirement_oneOf_i2_const">Specific value: <code>"required"</code></span>
         
 
         
@@ -1115,7 +1257,7 @@
             <div class="card-body pl-5">
 
     <h4>Description</h4><span class="badge badge-dark value-type">Type: string</span><br/>
-<span class="description"><p>The description of this qualifier.</p>
+<span class="description"><p>The description of this qualifier key.</p>
 </span>
         
 
@@ -1254,7 +1396,7 @@
             <div class="card-body pl-5">
 
     <h4>Case sensitive</h4><span class="badge badge-dark value-type">Type: boolean</span> <span class="badge badge-success default-value">Default: true</span><br/>
-<span class="description"><p>true if this PURL component is case sensitive. If false, the canonical form shall be lowercased.</p>
+<span class="description"><p>true if this PURL component is case sensitive. If false, the form shall be lowercased.</p>
 </span>
         
 
@@ -1409,7 +1551,7 @@
             <div class="card-body pl-5">
 
     <h4>PURL examples</h4><span class="badge badge-dark value-type">Type: array of string</span><br/>
-<span class="description"><p>Example of valid, canonical PURLs for this package type.</p>
+<span class="description"><p>Example of valid PURLs for this package type.</p>
 </span>
         
 
@@ -1505,6 +1647,6 @@
 </div>
 
     <footer>
-        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on 2026-09-30 at 16:45:38 -0700</p>
+        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on 2026-09-30 at 15:28:27 -0700</p>
     </footer></body>
 </html>

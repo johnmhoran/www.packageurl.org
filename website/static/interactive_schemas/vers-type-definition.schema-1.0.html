@@ -1,0 +1,469 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,800">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="schema_doc.css">
+    <script src="https://use.fontawesome.com/facf9fa52c.js"></script>
+    <script src="schema_doc.min.js"></script>
+    <meta charset="utf-8"/>
+        
+    
+    <title>VErsion Range Specifier (VERS) Type Definition</title>
+</head>
+<body onload="anchorOnLoad();" id="root">
+
+    
+                     <h1>vers-type-definition.schema-1.0.json</h1>
+            <span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p>Schema to define the structure of a VErsion Range Specifier (VERS) type.</p>
+</span> <span class="badge badge-info no-additional">No Additional Properties</span>
+        
+
+        
+        
+
+        
+<div class="accordion" id="accordionschema">
+    <div class="card">
+        <div class="card-header" id="headingschema">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#schema"
+                        aria-expanded="" aria-controls="schema" onclick="setAnchor('#schema')"><span class="property-name">$schema</span></button>
+            </h2>
+        </div>
+
+        <div id="schema"
+             class="collapse property-definition-div" aria-labelledby="headingschema"
+             data-parent="#accordionschema">
+            <div class="card-body pl-5">
+
+    <h4>JSON schema</h4><span class="badge badge-dark value-type">Type: const</span><span class="badge badge-info value-type">Format: uri</span><br/>
+<span class="description"><p>URL of the JSON schema for VERS type definition.</p>
+</span><span class="const-value" id="schema_const">Specific value: <code>"https://packageurl.org/vers-schemas/vers-type-definition.schema-1.0.json"</code></span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionid">
+    <div class="card">
+        <div class="card-header" id="headingid">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#id"
+                        aria-expanded="" aria-controls="id" onclick="setAnchor('#id')"><span class="property-name">$id</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="id"
+             class="collapse property-definition-div" aria-labelledby="headingid"
+             data-parent="#accordionid">
+            <div class="card-body pl-5">
+
+    <h4>VERS type definition id</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>The unique identifier URI for this VERS type definition.</p>
+</span><span class="pattern-value" id="id_pattern">Must match regular expression: <code>^https:\/\/packageurl\.org/vers-types/[a-z0-9-]+-definition\.json$</code></span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiontype">
+    <div class="card">
+        <div class="card-header" id="headingtype">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#type"
+                        aria-expanded="" aria-controls="type" onclick="setAnchor('#type')"><span class="property-name">type</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="type"
+             class="collapse property-definition-div" aria-labelledby="headingtype"
+             data-parent="#accordiontype">
+            <div class="card-body pl-5">
+
+    <h4>VERS type</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>The type string for this VERS type.</p>
+</span><span class="pattern-value" id="type_pattern">Must match regular expression: <code>^[a-z][a-z0-9-\.]+$</code></span>
+        
+
+        
+        
+
+        <br/>
+<div class="badge badge-secondary">Examples:</div>
+<br/><div id="type_ex1" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;semver&quot;</span>
+</pre></div>
+</div><div id="type_ex2" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;maven&quot;</span>
+</pre></div>
+</div><div id="type_ex3" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;pypi&quot;</span>
+</pre></div>
+</div><div id="type_ex4" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;npm&quot;</span>
+</pre></div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiontype_name">
+    <div class="card">
+        <div class="card-header" id="headingtype_name">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#type_name"
+                        aria-expanded="" aria-controls="type_name" onclick="setAnchor('#type_name')"><span class="property-name">type_name</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="type_name"
+             class="collapse property-definition-div" aria-labelledby="headingtype_name"
+             data-parent="#accordiontype_name">
+            <div class="card-body pl-5">
+
+    <h4>Type name</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>The name of this VERS type.</p>
+</span>
+        
+
+        
+        
+
+        <br/>
+<div class="badge badge-secondary">Examples:</div>
+<br/><div id="type_name_ex1" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;Apache Maven Dependency Version Requirement&quot;</span>
+</pre></div>
+</div><div id="type_name_ex2" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;npm version range&quot;</span>
+</pre></div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordiondescription">
+    <div class="card">
+        <div class="card-header" id="headingdescription">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#description"
+                        aria-expanded="" aria-controls="description" onclick="setAnchor('#description')"><span class="property-name">description</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="description"
+             class="collapse property-definition-div" aria-labelledby="headingdescription"
+             data-parent="#accordiondescription">
+            <div class="card-body pl-5">
+
+    <h4>Description</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>The description of this VERS type.</p>
+</span>
+        
+
+        
+        
+
+        <br/>
+<div class="badge badge-secondary">Examples:</div>
+<br/><div id="description_ex1" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;Apache Maven dependency version requirement as defined in a Maven POM.&quot;</span>
+</pre></div>
+</div><div id="description_ex2" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;npm dependencies version range as defined in a package.json.&quot;</span>
+</pre></div>
+</div><div id="description_ex3" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;RubyGems version requirement restrictions using restriction operators.&quot;</span>
+</pre></div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionvers_examples">
+    <div class="card">
+        <div class="card-header" id="headingvers_examples">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#vers_examples"
+                        aria-expanded="" aria-controls="vers_examples" onclick="setAnchor('#vers_examples')"><span class="property-name">vers_examples</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="vers_examples"
+             class="collapse property-definition-div" aria-labelledby="headingvers_examples"
+             data-parent="#accordionvers_examples">
+            <div class="card-body pl-5">
+
+    <h4>VERS examples</h4><span class="badge badge-dark value-type">Type: array of string</span><br/>
+<span class="description"><p>Examples of valid VERS notations for this VERS type.</p>
+</span>
+        
+
+        
+        
+
+        <p><span class="badge badge-light restriction min-items-restriction" id="vers_examples_minItems">Must contain a minimum of <code>1</code> items</span></p><p><span class="badge badge-light restriction unique-items-restriction" id="vers_examples_uniqueItems">All items must be unique</span></p> <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="vers_examples_items">
+            
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="pattern-value" id="vers_examples_items_pattern">Must match regular expression: <code>^vers:[a-z][a-z0-9-\.]+/.*$</code></span>
+        
+
+        
+        
+
+        
+        </div>
+    </div><br/>
+<div class="badge badge-secondary">Example:</div>
+<br/><div id="vers_examples_ex1" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;vers:npm/1.223&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;vers:semver/&lt;1.2.2|&gt;2.0.0|=7.0.0&quot;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionnative_range_and_vers_equivalent_examples">
+    <div class="card">
+        <div class="card-header" id="headingnative_range_and_vers_equivalent_examples">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#native_range_and_vers_equivalent_examples"
+                        aria-expanded="" aria-controls="native_range_and_vers_equivalent_examples" onclick="setAnchor('#native_range_and_vers_equivalent_examples')"><span class="property-name">native_range_and_vers_equivalent_examples</span></button>
+            </h2>
+        </div>
+
+        <div id="native_range_and_vers_equivalent_examples"
+             class="collapse property-definition-div" aria-labelledby="headingnative_range_and_vers_equivalent_examples"
+             data-parent="#accordionnative_range_and_vers_equivalent_examples">
+            <div class="card-body pl-5">
+
+    <h4>Examples of native version ranges and their VERS equivalents.</h4><span class="badge badge-dark value-type">Type: array of object</span><br/>
+<span class="description"><p>Optional list of examples of native version ranges mapped to their corresponding VERS syntax.</p>
+</span>
+        
+
+        
+        
+
+        <p><span class="badge badge-light restriction min-items-restriction" id="native_range_and_vers_equivalent_examples_minItems">Must contain a minimum of <code>1</code> items</span></p><p><span class="badge badge-light restriction unique-items-restriction" id="native_range_and_vers_equivalent_examples_uniqueItems">All items must be unique</span></p> <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="native_range_and_vers_equivalent_examples_items">
+            
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+ <span class="badge badge-info no-additional">No Additional Properties</span>
+        
+
+        
+        
+
+        
+<div class="accordion" id="accordionnative_range_and_vers_equivalent_examples_items_native_range">
+    <div class="card">
+        <div class="card-header" id="headingnative_range_and_vers_equivalent_examples_items_native_range">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#native_range_and_vers_equivalent_examples_items_native_range"
+                        aria-expanded="" aria-controls="native_range_and_vers_equivalent_examples_items_native_range" onclick="setAnchor('#native_range_and_vers_equivalent_examples_items_native_range')"><span class="property-name">native_range</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="native_range_and_vers_equivalent_examples_items_native_range"
+             class="collapse property-definition-div" aria-labelledby="headingnative_range_and_vers_equivalent_examples_items_native_range"
+             data-parent="#accordionnative_range_and_vers_equivalent_examples_items_native_range">
+            <div class="card-body pl-5">
+
+    <h4>Native range example</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Native range example for this VERS type.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionnative_range_and_vers_equivalent_examples_items_vers">
+    <div class="card">
+        <div class="card-header" id="headingnative_range_and_vers_equivalent_examples_items_vers">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#native_range_and_vers_equivalent_examples_items_vers"
+                        aria-expanded="" aria-controls="native_range_and_vers_equivalent_examples_items_vers" onclick="setAnchor('#native_range_and_vers_equivalent_examples_items_vers')"><span class="property-name">vers</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="native_range_and_vers_equivalent_examples_items_vers"
+             class="collapse property-definition-div" aria-labelledby="headingnative_range_and_vers_equivalent_examples_items_vers"
+             data-parent="#accordionnative_range_and_vers_equivalent_examples_items_vers">
+            <div class="card-body pl-5">
+
+    <h4>Corresponding VERS notation</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Corresponding VERS notation for this VERS type.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionnative_range_and_vers_equivalent_examples_items_note">
+    <div class="card">
+        <div class="card-header" id="headingnative_range_and_vers_equivalent_examples_items_note">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#native_range_and_vers_equivalent_examples_items_note"
+                        aria-expanded="" aria-controls="native_range_and_vers_equivalent_examples_items_note" onclick="setAnchor('#native_range_and_vers_equivalent_examples_items_note')"><span class="property-name">note</span></button>
+            </h2>
+        </div>
+
+        <div id="native_range_and_vers_equivalent_examples_items_note"
+             class="collapse property-definition-div" aria-labelledby="headingnative_range_and_vers_equivalent_examples_items_note"
+             data-parent="#accordionnative_range_and_vers_equivalent_examples_items_note">
+            <div class="card-body pl-5">
+
+    <h4>Note</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Optional note about this example.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionnative_range_and_vers_equivalent_examples_items_reference_url">
+    <div class="card">
+        <div class="card-header" id="headingnative_range_and_vers_equivalent_examples_items_reference_url">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#native_range_and_vers_equivalent_examples_items_reference_url"
+                        aria-expanded="" aria-controls="native_range_and_vers_equivalent_examples_items_reference_url" onclick="setAnchor('#native_range_and_vers_equivalent_examples_items_reference_url')"><span class="property-name">reference_url</span></button>
+            </h2>
+        </div>
+
+        <div id="native_range_and_vers_equivalent_examples_items_reference_url"
+             class="collapse property-definition-div" aria-labelledby="headingnative_range_and_vers_equivalent_examples_items_reference_url"
+             data-parent="#accordionnative_range_and_vers_equivalent_examples_items_reference_url">
+            <div class="card-body pl-5">
+
+    <h4>Reference URL</h4><span class="badge badge-dark value-type">Type: string</span><span class="badge badge-info value-type">Format: uri</span><br/>
+<span class="description"><p>Optional reference URL for this native range example.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionnote">
+    <div class="card">
+        <div class="card-header" id="headingnote">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#note"
+                        aria-expanded="" aria-controls="note" onclick="setAnchor('#note')"><span class="property-name">note</span></button>
+            </h2>
+        </div>
+
+        <div id="note"
+             class="collapse property-definition-div" aria-labelledby="headingnote"
+             data-parent="#accordionnote">
+            <div class="card-body pl-5">
+
+    <h4>Note</h4><span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Note about this VERS type.</p>
+</span>
+        
+
+        
+        
+
+        
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionreference_urls">
+    <div class="card">
+        <div class="card-header" id="headingreference_urls">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#reference_urls"
+                        aria-expanded="" aria-controls="reference_urls" onclick="setAnchor('#reference_urls')"><span class="property-name">reference_urls</span></button>
+            </h2>
+        </div>
+
+        <div id="reference_urls"
+             class="collapse property-definition-div" aria-labelledby="headingreference_urls"
+             data-parent="#accordionreference_urls">
+            <div class="card-body pl-5">
+
+    <h4>Reference URLs</h4><span class="badge badge-dark value-type">Type: array of string</span><br/>
+<span class="description"><p>List of informational reference URLs about this VERS type, such as specifications or reference code.</p>
+</span>
+        
+
+        
+        
+
+        <p><span class="badge badge-light restriction min-items-restriction" id="reference_urls_minItems">Must contain a minimum of <code>1</code> items</span></p><p><span class="badge badge-light restriction unique-items-restriction" id="reference_urls_uniqueItems">All items must be unique</span></p> <span class="badge badge-info no-additional">No Additional Items</span><h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="reference_urls_items">
+            
+
+    <span class="badge badge-dark value-type">Type: string</span><span class="badge badge-info value-type">Format: uri</span><br/>
+
+        
+
+        
+        
+
+        
+        </div>
+    </div><br/>
+<div class="badge badge-secondary">Examples:</div>
+<br/><div id="reference_urls_ex1" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;https://maven.apache.org/pom.html#dependency-version-requirement-specification&quot;</span>
+</pre></div>
+</div><div id="reference_urls_ex2" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;https://github.com/npm/node-semver&quot;</span>
+</pre></div>
+</div><div id="reference_urls_ex3" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;https://docs.npmjs.com/cli/v12/configuring-npm/package-json#dependencies&quot;</span>
+</pre></div>
+</div><div id="reference_urls_ex4" class="jumbotron examples"><div class="highlight"><pre><span></span><span class="s2">&quot;https://github.com/ruby/ruby/blob/d1c079751b80352d347452c8d134ffb177838adb/lib/rubygems/requirement.rb#L6&quot;</span>
+</pre></div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on 2026-09-30 at 15:28:35 -0700</p>
+    </footer></body>
+</html>
