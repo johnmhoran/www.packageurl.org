@@ -49,6 +49,16 @@
     "source": "docs/tests/test-overview.md",
     "dest": "website/docs/vers/test-overview.md"
   },
+    {
+    "repo": "vers-spec",
+    "source": "docs/tests/test-schema.md",
+    "dest": "website/docs/vers/test-schema.md"
+  },
+      {
+    "repo": "vers-spec",
+    "source": "docs/tests/test-suite.md",
+    "dest": "website/docs/vers/test-suite.md"
+  },
   {
     "repo": "vers-spec",
     "source": "docs/types/vers-types.md",
