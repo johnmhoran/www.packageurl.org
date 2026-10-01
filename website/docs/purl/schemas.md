@@ -31,4 +31,4 @@ The **PURL Test JSON Schema** provides the structure for test at two levels:
 **PURL Test JSON Schema**
 
 - <a href="https://github.com/package-url/purl-spec/blob/main/schemas/purl-test.schema-0.1.json" target="_blank">JSON Schema</a> `↗`
-- <a href="/interactive_schemas/purl-test.schema.html" target="_blank">Interactive HTML</a> `↗`
+- <a href="/interactive_schemas/purl-test.schema-0.1.html" target="_blank">Interactive HTML</a> `↗`
