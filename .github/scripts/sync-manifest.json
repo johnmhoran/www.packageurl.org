@@ -21,8 +21,8 @@
   },
   {
     "repo": "purl-spec",
-    "source": "docs/tests/test-schema.md",
-    "dest": "website/docs/purl/test-schema.md"
+    "source": "docs/tests/test-schema-changes.md",
+    "dest": "website/docs/purl/test-schema-changes.md"
   },
   {
     "repo": "purl-spec",
