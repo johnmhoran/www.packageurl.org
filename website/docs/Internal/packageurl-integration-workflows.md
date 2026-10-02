@@ -50,7 +50,7 @@ or `vers-spec` repo origin is kept in the file: `website/docusaurus.config.js`.
 The files are copied to the `www.packageurl.org` repo with a "pull" style
 GitHub Action [Sync markdown docs from purl-spec and vers-spec](https://github.com/package-url/www.packageurl.org/actions/workflows/sync_md_docs.yml)
 from the `wwww.packageurl.org` repo. The GH pull Action runs automatically on
-a daily basis on on demand manually.
+a daily basis or on demand manually.
 
 This mapping is expected to change as we update the website.
 
@@ -60,7 +60,7 @@ The (generated) markdown versions of PURL `type` definition files are copied to
 the `www.packageurl.org` repo with a "pull" style GitHub Action
 [Sync purl-spec Type Definitions](https://github.com/package-url/www.packageurl.org/actions/workflows/sync-types-definitions.yml)
 from the `wwww.packageurl.org` repo. The GH pull Action runs automatically on
-a daily basis on on demand manually.
+a daily basis or on demand manually.
 
 Clicking on a PURL `type` card on the PURL Types grid opens the corresponding
 markdown file on the website (not a new browser tab)
@@ -78,8 +78,8 @@ The primary sources for the PURL and VERS schema definition files are:
 - `vers-spec/schemas/`
 
 where each file is versioned according to the patterns:
-- purl-type-definition.schema-<major>.<minor>.json
-- vers-type-definition.schema-<major>.<minor>.json
+- `purl-type-definition.schema-<major>.<minor>.json`
+- `vers-type-definition.schema-<major>.<minor>.json`
 
 There are copies of the of PURL and VERS (JSON) Schema files in the folder
 `website/static/schemas` for display on the website. These files are currently
@@ -103,25 +103,27 @@ or '$id' fields in the schema and ` type` definition files. The current lists
 are:
 
 #### PURL & VERS schema files
-- wwww.packageurl.org/purl-schemas:
+- `wwww.packageurl.org/purl-schemas/`:
   - `purl-test.schema-0.2.json`
   - `purl-type-definition.schema-1.1.json`
-- wwww.packageurl.org/schemas:
+- `wwww.packageurl.org/schemas/`:
   - `purl-test.schema-0.1.json`
   - `purl-type-definition.schema-1.0.json`
   - `purl-types-index.schema-1.0.json`
   - `vers-test.schema-0.1.json`
-- wwww.packageurl.org/vers-schemas:
+- `wwww.packageurl.org/vers-schemas/`:
   - `vers-test.schema-0.2.json`
   - `vers-type-definition.schema-1.0.json`
   - `vers-types-index.schema-1.0.json`
 
 #### PURL & VERS `type` definition files
-- wwww.packageurl.org/purl-types: All PURL `type` definition files using
+- `wwww.packageurl.org/purl-types/`: All PURL `type` definition files using
   `purl-type-definition.schema-1.1`.json`
-- wwww.packageurl.org/types: All URL `type` definition files using
+- `wwww.packageurl.org/types/`: All URL `type` definition files using
   `purl-type-definition.schema-1.0.json`
-- wwww.packageurl.org/vers-types: All VERS `type` definition files
+- `wwww.packageurl.org/vers-types/`: All VERS `type` definition files
+
+*Change required*
 
 With the current workflows for managing www.package.url we will need to keep
 copies of all of the PURL & VERS schema and `type` definition files in the
@@ -137,13 +139,14 @@ need to add copies of the "source" JSON format PURL `type` definition files.
 
 ### Staging
 
-The "staging" version of the website is at: https://package-url.github.io/www.packageurl.org/. The staging website is updated by the GitHub Action [Build & Deploy Docusaurus Site](https://github.com/package-url/www.packageurl.org/actions/workflows/A-B-deployment.yml)
-whenever a PR is merged. A PR push triggers a workflow to rebuild the
-Docusaurus Site, but a PR push does not update the staging website.
+The "staging" version of the website is at: https://package-url.github.io/www.packageurl.org. The 
+staging website is updated by the GitHub Action [Build & Deploy Docusaurus Site](https://github.com/package-url/www.packageurl.org/actions/workflows/A-B-deployment.yml)
+whenever a PR is merged in the `www.packageur.org` repo. A PR push triggers a workflow to 
+rebuild the Docusaurus Site, but a PR push does not update the staging website.
 
 ### Production
 
-The current "production" version of the website is at: https://www.packageurl.org/
+The current "production" version of the website is at: https://www.packageurl.org
 which is hosted at Dreamhost under the nexB account. There is currently no
 automatic deployment for the production website. An update deployment is
 initiated by a manual invocation of the GitHub Action [Build & Deploy Docusaurus Site](https://github.com/package-url/www.packageurl.org/actions/workflows/A-B-deployment.yml)
