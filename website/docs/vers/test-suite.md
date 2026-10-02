@@ -13,7 +13,7 @@ canonical form.
 
 ## Test files
 Each VERS test file is a collection of test cases whose structure is defined
-by the VERS test schema. The current VERS test schema is located at: https://packageurl.org/schemas/.
+by the VERS test schema. The current VERS test schema is [vers-test.schema-0.2.json](https://github.com/package-url/vers-spec/blob/main/schemas/vers-test.schema-0.2.json).
 
 The VERS test files are currently organized in the folder: https://github.com/package-url/vers-spec/tree/main/tests. Most test file names follow the pattern of VERS **type**
 concatenated with **test type**.
@@ -46,7 +46,7 @@ There are two VERS **test groups**:
 - 'required': A test case to demonstrate conformance with the VERS
   specification.
 - 'recommended': A test case that is recommended to identify common problems
-  in VERS data and how to remediate or normalize them in order to pass the
+  in VERS data and how to remediate or normalise them in order to pass the
   'required' tests. The use of 'recommended' test cases is always optional.
 
 The terminology of 'required' vs 'recommended' matches the use of "shall" vs
