@@ -5,7 +5,7 @@ and VERS specifications and for the Package-URL community which maintains the
 specifications and some of the software packages that implement PURL or VERS
 or both.
 
-This document covers the flow of information into the www.packageurl.org
+This document covers the flow of information into the `www.packageurl.org`
 repository and how that information is deployed to the staging and production
 instances of www.packageurl.org.
 
