@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://packageurl.org/schemas/purl-test.schema-0.1.json",
+  "$id": "https://packageurl.org/purl-schemas/purl-test.schema-0.2.json",
   "title": "Package-URL test definition",
-  "description": "Schema for Package-URL building and parsing tests with input and expected output.",
+  "description": "Schema for Package-URL test cases.",
   "type": "object",
   "additionalProperties": false,
   "definitions": {
@@ -70,7 +70,7 @@
     },
     "purl_test": {
       "title": "PURL test",
-      "description": "A PURL test with input and expected output.",
+      "description": "A PURL test case with input and expected output.",
       "type": "object",
       "required": [
         "description",
@@ -86,30 +86,30 @@
         },
         "test_group": {
           "title": "Test group",
-          "description": "The group of this test like 'base' or 'advanced'.",
+          "description": "The conformance group of this test case.",
           "type": "string",
           "enum": [
-            "base",
-            "advanced"
+            "required",
+            "recommended"
           ],
           "meta:enum": {
-            "base": "Test group for base conformance tests for PURL building and parsing.",
-            "advanced": "Test group for advanced tests to support flexible PURL building and parsing."
+            "required": "Test group for test cases required for conformance with the PURL standard - ECMA-427.",
+            "recommended": "Test group for test cases recommended to identify common problems in PURL data and how to remediate or normalize them in order to pass 'required' tests."
           }
         },
         "test_type": {
           "title": "Test type",
-          "description": "The type of this test like 'build' or 'parse'.",
+          "description": "The functional type of this test case.",
           "type": "string",
           "enum": [
             "build",
             "parse",
-            "roundtrip"
+            "validate"
           ],
           "meta:enum": {
             "build": "A test to build a canonical PURL output string from an input of decoded PURL components.",
             "parse": "A test to parse a PURL input string into a set of decoded components.",
-            "roundtrip": "A test to produce a canonical PURL output string from an input PURL string."
+            "validate": "A test to validate whether a PURL input string is in canonical form."
           }
         },
         "expected_failure": {
@@ -118,9 +118,9 @@
           "type": "boolean",
           "default": false
         },
-        "expected_failure_reason": {
-          "title": "Expected failure reason",
-          "description": "The reason why this test is expected to fail if expected_failure is true.",
+        "expected_message": {
+          "title": "Expected test message",
+          "description": "The reason why a test failed or another message about the test result.",
           "default": null,
           "type": [
             "string",
@@ -153,7 +153,7 @@
               },
               "expected_output": {
                 "title": "Expected output decoded PURL components",
-                "description": "Test output as an object decoded PURL components, unless expected_failure.",
+                "description": "Test output as an object of decoded PURL components, unless expected_failure is true.",
                 "$ref": "#/definitions/purl_components"
               }
             },
@@ -181,13 +181,13 @@
           "then": {
             "properties": {
               "input": {
-                "title": "Expected output decoded PURL components",
-                "description": "Test output as an object decoded PURL components, unless expected_failure.",
+                "title": "Expected input of decoded PURL components",
+                "description": "Test input as an object of decoded PURL components, unless expected_failure=true.",
                 "$ref": "#/definitions/purl_components"
               },
               "expected_output": {
                 "title": "Expected canonical PURL",
-                "description": "A canonical PURL string to use as a test ouput.",
+                "description": "Test output in the format of a canonical PURL string.",
                 "type": "string"
               }
             },
@@ -201,7 +201,7 @@
           "if": {
             "properties": {
               "test_type": {
-                "const": "roundtrip"
+                "const": "validate"
               }
             },
             "required": [
@@ -217,7 +217,7 @@
               },
               "expected_output": {
                 "title": "Expected canonical PURL",
-                "description": "A canonical PURL string to use as a test ouput.",
+                "description": "Test output in the format of a canonical PURL string.",
                 "type": "string"
               }
             },
@@ -252,7 +252,7 @@
             },
             "required": [
               "input",
-              "expected_failure_reason"
+              "expected_message"
             ]
           }
         },
@@ -274,14 +274,14 @@
           "then": {
             "properties": {
               "input": {
-                "title": "Expected output decoded PURL components",
-                "description": "Test output as an object decoded PURL components, unless expected_failure.",
+                "title": "Expected input of  decoded PURL components",
+                "description": "Test input as an object of decoded PURL components, unless expected_failure=true.",
                 "$ref": "#/definitions/purl_components"
               }
             },
             "required": [
               "input",
-              "expected_failure_reason"
+              "expected_message"
             ]
           }
         }
@@ -292,7 +292,7 @@
     "$schema": {
       "title": "JSON schema",
       "description": "Contains the URL of the JSON schema for Package-URL tests.",
-      "const": "https://packageurl.org/schemas/purl-test.schema-0.1.json",
+      "const": "https://packageurl.org/purl-schemas/purl-test.schema-0.2.json",
       "format": "uri"
     },
     "tests": {
