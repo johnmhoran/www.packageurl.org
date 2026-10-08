@@ -1,0 +1,37 @@
+[
+  {
+    "repo": "purl-spec",
+    "source": "schemas/purl-test.schema-0.2.json",
+    "dest": "website/static/purl-schemas/purl-test.schema-0.2.json"
+  },
+  {
+    "repo": "purl-spec",
+    "source": "schemas/purl-type-definition.schema-1.1.json",
+    "dest": "website/static/purl-schemas/purl-type-definition.schema-1.1.json"
+  },
+  {
+    "repo": "purl-spec",
+    "source": "types/",
+    "dest": "website/static/purl-types/"
+  },
+  {
+    "repo": "vers-spec",
+    "source": "schemas/vers-test.schema-0.2.json",
+    "dest": "website/static/vers-schemas/vers-test.schema-0.2.json"
+  },
+  {
+    "repo": "vers-spec",
+    "source": "schemas/vers-type-definition.schema-1.0.json",
+    "dest": "website/static/vers-schemas/vers-type-definition.schema-1.0.json"
+  },
+  {
+    "repo": "vers-spec",
+    "source": "schemas/vers-types-index.schema-1.0.json",
+    "dest": "website/static/vers-schemas/vers-types-index.schema-1.0.json"
+  },
+  {
+    "repo": "vers-spec",
+    "source": "types/",
+    "dest": "website/static/vers-types/"
+  }
+]
