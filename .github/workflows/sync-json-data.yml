@@ -1,0 +1,78 @@
+name: Sync JSON data from purl-spec and vers-spec
+
+on:
+  schedule:
+    - cron: '0 3 * * *'   # daily 03:00 UTC
+  workflow_dispatch:
+
+concurrency:
+  group: sync-json
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+        with:
+          token: ${{ secrets.SYNC_PAT }}
+          ref: main
+          fetch-depth: 0
+
+      - name: Sparse-checkout purl-spec
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+        with:
+          repository: package-url/purl-spec
+          path: _sources/purl-spec
+          sparse-checkout: |
+            schemas
+            types
+          sparse-checkout-cone-mode: true
+
+      - name: Sparse-checkout vers-spec
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
+        with:
+          repository: package-url/vers-spec
+          path: _sources/vers-spec
+          sparse-checkout: |
+            schemas
+            types
+          sparse-checkout-cone-mode: true
+
+      - name: Record source SHAs
+        id: shas
+        run: |
+          echo "purl=$(git -C _sources/purl-spec rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+          echo "vers=$(git -C _sources/vers-spec rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
+      - name: Set up Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405  # v6.2.0
+        with:
+          python-version: "3.12"
+
+      - name: Run sync
+        run: |
+          python .github/scripts/sync_json_data.py \
+            --manifest .github/scripts/sync-json-data-manifest.json \
+            --sources-root _sources \
+            --dest .
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            website/static/purl-schemas/ \
+            website/static/purl-types/ \
+            website/static/vers-schemas/ \
+            website/static/vers-types/
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "chore: sync files from purl-spec@${{ steps.shas.outputs.purl }} and vers-spec@${{ steps.shas.outputs.vers }}"
+            git pull --rebase origin main
+            git push origin main
+          fi
