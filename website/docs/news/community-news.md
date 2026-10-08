@@ -2,7 +2,7 @@
 id: community-news
 title: Community News
 sidebar_label: Community News
-hide_table_of_contents: true
+hide_table_of_contents: false
 ---
 
 # Package-URL Community News

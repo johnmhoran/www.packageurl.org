@@ -2,10 +2,39 @@
 id: spec-news
 title: PURL/VERS Specification News
 sidebar_label: Specification News
-hide_table_of_contents: true
+hide_table_of_contents: false
 ---
 
 Stay up to date with important news about the PURL and VERS specifications.
+
+### ISO starts work on Package-URL (PURL) specification
+**Date**: October 7, 2026
+
+**Details**: ISO has assigned Draft International Standard number [27056](https://www.iso.org/standard/95170.html) to the Package-URL (PURL) specification
+ECMA-427. Creating an ISO standard for PURL is proceeding under the
+[ISO/IEC JTC 1](https://jtc1info.org/) Joint Technical Committee.
+
+### ECMA-xxx-VERS 1st Edition approved by Ecma TC54
+**Date**: October 6, 2026
+
+**Details**: Ecma [Technical Commmittee TC54](https://tc54.org/) approved
+the 1st Edition of the new VERS standard [ECMA-xxx-VERS 1st Edition](https://ecma-tc54.github.io/ECMA-xxx-VERS/). This new edition is pending approval by
+the Ecma General Assembly in December. The ECMA standard number (ECMA-xxx) for
+VERS will be assigned after the GA approval.
+
+The corresponding release in the `vers-spec` repository is [v1.2.1](https://github.com/package-url/vers-spec/releases/tag/v1.2.1).
+
+### ECMA-427 2nd Edition approved by Ecma TC54
+**Date**: October 6, 2026
+
+**Details**: Ecma [Technical Commmittee TC54](https://tc54.org/) approved
+the PURL standard [ECMA-427 2nd Edition](https://ecma-tc54.github.io/ECMA-427/). This new edition is pending approval by the Ecma General Assembly in December.
+
+See the [Release Notes](https://github.com/package-url/purl-spec/blob/main/docs/specification/ECMA-427-2nd_Edition-Release_notes.md) for an overview of the
+changes.
+
+The corresponding release in the `purl-spec` repository is [v1.1.0](https://github.com/package-url/purl-spec/releases/tag/v1.1.0).
+
 
 ### PURL Test Schema v0.2
 **Date**: August 4, 2026
