@@ -10,7 +10,7 @@ Stay up to date with important news about the PURL and VERS specifications.
 ### ISO starts work on Package-URL (PURL) specification
 **Date**: October 7, 2026
 
-**Details**: ISO has assigned Draft International Standard number [27506](https://www.iso.org/standard/95170.html) to the Package-URL (PURL) specification
+**Details**: ISO has assigned Draft International Standard number [27056](https://www.iso.org/standard/95170.html) to the Package-URL (PURL) specification
 ECMA-427. Creating an ISO standard for PURL is proceeding under the
 [ISO/IEC JTC 1](https://jtc1info.org/) Joint Technical Committee.
 
