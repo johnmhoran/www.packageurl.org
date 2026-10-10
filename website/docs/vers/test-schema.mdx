@@ -2,25 +2,29 @@
 id: test-schema
 title: VERS test schema
 sidebar_label: Test schema
-hide_table_of_contents: true
+hide_table_of_contents: false
 ---
 
 import JsonViewer from '@site/src/components/JsonViewer';
 
 # VERS test schema
 
-The VERS Test Schema is a [JSON Schema](https://json-schema.org/) that
-provides the structure for tools to conform to the VERS specification for tool
-functions such as:
+The VERS Test Schema provides the structure for test cases that a tool
+can use to verify conformance with the VERS specification for functions such
+as:
 
 - Build a VERS string from a native ecosystem data source;
 - Merge an array of VERS strings into a canonical VERS string;
 - Parse a VERS string to determine if a version is contained within a range;
 - Validate a VERS string,
 
-The structure of test cases used in VERS test files is defined in a JSON
-schema. The current VERS Test Schema is [vers-test.schema-0.2.json](https://github.com/package-url/vers-spec/blob/main/schemas/vers-test.schema-0.2.json).
-The VERS Test Schema v0.2 implements [JSON Schema version "Draft 2020-12"](https://json-schema.org/draft/2020-12).
+The VERS Test Schemas implement [JSON Schema version "Draft 2020-12"](https://json-schema.org/draft/2020-12).
+
+You can view the current VERS Test Schema v0.2 as JSON or in an
+"Interactive HTML" format that illustrates the schema structure.
+
+- <a href="https://github.com/package-url/vers-spec/blob/main/schemas/vers-test.schema-0.2.json" target="_blank">JSON Schema</a> `↗`
+- <a href="/interactive_schemas/vers-test.schema-0.2.html" target="_blank">Interactive HTML</a> `↗`
 
 ## VERS Test Schema v0.2 changes
 The VERS test schema was updated to version 0.2 on August 4, 2026. This update
