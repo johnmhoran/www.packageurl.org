@@ -87,11 +87,12 @@ const config = {
                             'purl/test-schema-changes.md': `https://github.com/package-url/purl-spec/blob/main/docs/tests/test-schema-changes.md`,
 
                             // "VERS" section
+                            'vers/ecma-vers_1st-edition.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers/faq.md': `https://github.com/package-url/vers-spec/blob/main/docs/faq.md`,
                             'vers/how-to-parse.md': `https://github.com/package-url/vers-spec/blob/main/docs/specification/how-to-parse.md`,
                             'vers/introduction.md': `https://github.com/package-url/vers-spec/blob/main/docs/specification/standard/introduction.md`,
                             'vers/specification-folder.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
-                            'vers/specification.md': `https://github.com/package-url/vers-spec/blob/main/docs/specification/standard/specification.md`,
+                            'vers/use-cases.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
 
                             'vers/tests-folder.md': `https://github.com/package-url/www.packageurl.org/blob/main/website/docs/${docPath}`,
                             'vers/test-overview.md': `https://github.com/package-url/vers-spec/blob/main/docs/tests/test-overview.md`,
