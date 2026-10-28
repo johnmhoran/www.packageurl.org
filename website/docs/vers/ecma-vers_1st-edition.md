@@ -5,7 +5,7 @@ sidebar_label: ECMA-xxx-VERS 1st Edition
 hide_table_of_contents: true
 ---
 
-# ECMA-xxx-VERS ist Edition
+# ECMA-xxx-VERS 1st Edition
 
 The [ECMA-xxx-VERS 1st Edition](https://ecma-tc54.github.io/ECMA-xxx-VERS/)
 standard has been approved by Ecma Technical Committee 54 (TC54). It is
