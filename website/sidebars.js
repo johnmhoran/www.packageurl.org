@@ -45,7 +45,8 @@ const sidebars = {
             },
             collapsed: false,
             items: [
-                'vers/specification',
+                'vers/ecma-vers_1st-edition',
+                `vers/use-cases`,
                 'vers/how-to-parse',
             ],
         },

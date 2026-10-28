@@ -7,14 +7,14 @@ hide_table_of_contents: true
 
 # ECMA-427 2nd Edition
 
-The [ECMA-427 2nd Edition](https://ecma-tc54.github.io/ECMA-427/) has been
-approved by Ecma Technical Committee 54 (TC54). It is pending approval by
+The [ECMA-427 2nd Edition](https://ecma-tc54.github.io/ECMA-427/) standard has
+been approved by Ecma Technical Committee 54 (TC54). It is pending approval by
 the Ecma General Assembly in December 2026.
 
 The content of **ECMA-427** is a subset of the overall PURL specification but
 its content defines the normative standard. Some elements of the specification
 that are not currently included in **ECMA-427** are the How-to guides, the
-PURL Test Schema, the PURL test cases, and the data for registered PURL Type
+PURL Test Schema, the PURL test cases, and the data for registered PURL `type`
 definitions.
 
 A reference to the "PURL standard" is always a reference to **ECMA-427**. A
