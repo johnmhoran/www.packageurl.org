@@ -24,18 +24,31 @@ reference to the "PURL specification" may refer to information from
 
 The key elements of **ECMA-427 2nd Edition** are:
 - [Introduction](https://ecma-tc54.github.io/ECMA-427/#sec-intro): This text
-  is also available on this website as the [Introduction](https://package-url.github.io/www.packageurl.org/docs/purl/introduction) above.
-- [Clause 1 - Scope](https://ecma-tc54.github.io/ECMA-427/#sec-scope): A brief
-  statement of the ECMA-427 scope.
+  is also available on this website as the [Introduction](https://package-url.github.io/www.packageurl.org/docs/purl/introduction)
+  above.
+- [Clause 1 - Scope](https://ecma-tc54.github.io/ECMA-427/#sec-scope): This Clause is a
+  brief statement of the ECMA-427 scope.
 - [Clause 2 - Conformance](https://ecma-tc54.github.io/ECMA-427/#sec-conformance):
-  This clause defines conformance to the PURL standard.
+  This Clause defines conformance to the PURL standard.
 - [Clause 3 - Normative References](https://ecma-tc54.github.io/ECMA-427/#sec-normative-references):
-  This clause lists 3 external documents that are normative references for the
+  This Clause lists 5 external documents that are normative references for the
   PURL standard.
 - [Clause 4 - Overview](https://ecma-tc54.github.io/ECMA-427/#sec-overview):
-  This is a non-normative overview of the PURL standard.
-- [Clause 5 - Package-URL Specification](https://ecma-tc54.github.io/ECMA-427/#sec-purl-specification): This text is also referred to as the
- [Core Specification](https://packageurl.org/docs/purl/specification)
- on this website.
-- [Clause 6 - Package-URL Type Definition Schema](https://ecma-tc54.github.io/ECMA-427/#sec-purl-type-schema): This text is a human-friendly version of the JSON
-  schema.
+  This Clause is a non-normative overview of the PURL standard.
+- [Clause 5 - Package-URL Specification](https://ecma-tc54.github.io/ECMA-427/#sec-purl-specification):
+  This Clause is the normative definition of the PURL standard.
+- [Clause 6 - Package-URL Type Definition Schema](https://ecma-tc54.github.io/ECMA-427/#sec-purl-type-schema):
+  This Clause is a human-friendly version of the JSON schema.
+- [Annex A - PURL Type Definition Schema](https://ecma-tc54.github.io/ECMA-427/#sec-schemas):
+  This normative Annex provides a copy of the PURL Type Definition Schema:
+  `purl-type-definition.schema-1.1.json` in JSON format.
+- [Annex B - Recommended qualifiers](https://ecma-tc54.github.io/ECMA-427/#sec-recommended-qualifiers):
+  This informative Annex documents PURL qualifiers that may be used across
+  many PURL type definitions.
+- [Annex C - ABNF Grammar](https://ecma-tc54.github.io/ECMA-427/#sec-abnf-grammar):
+  This informative Annex documents the Augmented Backus-Naur Form (ABNF)
+  grammar for PURL strings.
+
+The **ECMA-427** standard is maintained in the [ECMA-427](https://github.com/Ecma-TC54/ECMA-427) repository on GitHub.
+
+
